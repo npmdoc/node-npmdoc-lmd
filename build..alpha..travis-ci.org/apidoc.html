@@ -1,0 +1,3329 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://lmdjs.org/"
+
+    >lmd (v1.13.4)</a>
+</h1>
+<h4>LMD: Lazy Module Declaration</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd">module lmd</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Cli.LogWriter">
+            function <span class="apidocSignatureSpan">lmd.</span>Cli.LogWriter
+            <span class="apidocSignatureSpan">(stream)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer">
+            function <span class="apidocSignatureSpan">lmd.</span>Writer
+            <span class="apidocSignatureSpan">(buildResult)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_">
+            function <span class="apidocSignatureSpan">lmd.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_">
+            function <span class="apidocSignatureSpan">lmd.</span>super_.super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.watch">
+            function <span class="apidocSignatureSpan">lmd.</span>watch
+            <span class="apidocSignatureSpan">(configFile, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.</span>Cli</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.</span>Cli.LogWriter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.</span>Writer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.</span>coverage_apply</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.</span>lmd_common</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.</span>super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.</span>super_.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.</span>super_.super_.super_.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.Cli">module lmd.Cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Cli.LogWriter">
+            function <span class="apidocSignatureSpan">lmd.Cli.</span>LogWriter
+            <span class="apidocSignatureSpan">(stream)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.Cli.LogWriter">module lmd.Cli.LogWriter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Cli.LogWriter.LogWriter">
+            function <span class="apidocSignatureSpan">lmd.Cli.</span>LogWriter
+            <span class="apidocSignatureSpan">(stream)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.Cli.LogWriter.prototype">module lmd.Cli.LogWriter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Cli.LogWriter.prototype.error">
+            function <span class="apidocSignatureSpan">lmd.Cli.LogWriter.prototype.</span>error
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Cli.LogWriter.prototype.help">
+            function <span class="apidocSignatureSpan">lmd.Cli.LogWriter.prototype.</span>help
+            <span class="apidocSignatureSpan">(content, errorMessage)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Cli.LogWriter.prototype.log">
+            function <span class="apidocSignatureSpan">lmd.Cli.LogWriter.prototype.</span>log
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Cli.LogWriter.prototype.ok">
+            function <span class="apidocSignatureSpan">lmd.Cli.LogWriter.prototype.</span>ok
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Cli.LogWriter.prototype.warn">
+            function <span class="apidocSignatureSpan">lmd.Cli.LogWriter.prototype.</span>warn
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.Writer">module lmd.Writer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.Writer">
+            function <span class="apidocSignatureSpan">lmd.</span>Writer
+            <span class="apidocSignatureSpan">(buildResult)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.Writer.prototype">module lmd.Writer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype._isCanWriteStream">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_isCanWriteStream
+            <span class="apidocSignatureSpan">(stream, fileName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype._logResult">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_logResult
+            <span class="apidocSignatureSpan">(stream, fileName, resourceName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype._onAllEnd">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_onAllEnd
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype._pipeStreamToFile">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_pipeStreamToFile
+            <span class="apidocSignatureSpan">(stream, fileName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype._resolvePaths">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_resolvePaths
+            <span class="apidocSignatureSpan">(buildConfig)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype._streamEnd">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_streamEnd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype._waitFor">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_waitFor
+            <span class="apidocSignatureSpan">(stream, event)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype._writeStreamsTo">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_writeStreamsTo
+            <span class="apidocSignatureSpan">(stream, paths, resourceName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype.logTo">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>logTo
+            <span class="apidocSignatureSpan">(cli)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype.relativeTo">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>relativeTo
+            <span class="apidocSignatureSpan">(cwd)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.Writer.prototype.writeAll">
+            function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>writeAll
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.coverage_apply">module lmd.coverage_apply</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.coverage_apply.interpret">
+            function <span class="apidocSignatureSpan">lmd.coverage_apply.</span>interpret
+            <span class="apidocSignatureSpan">(moduleName, file, content, lineOffset, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.lmd_common">module lmd.lmd_common</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.analiseModuleContent">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>analiseModuleContent
+            <span class="apidocSignatureSpan">(moduleOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.assembleLmdConfig">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>assembleLmdConfig
+            <span class="apidocSignatureSpan">(configFile, flagsNames, extraOptions, usedConfigs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.collectFlagsNotifications">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>collectFlagsNotifications
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.collectFlagsWarnings">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>collectFlagsWarnings
+            <span class="apidocSignatureSpan">(config, deepModulesInfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.collectModules">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>collectModules
+            <span class="apidocSignatureSpan">(config, configDir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.collectModulesInfo">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>collectModulesInfo
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.deepDestructableMerge">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>deepDestructableMerge
+            <span class="apidocSignatureSpan">(left, right)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.discoverModuleType">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>discoverModuleType
+            <span class="apidocSignatureSpan">(moduleName, modulesNames, globalsNames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.getGlobals">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>getGlobals
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.getModuleFileByShortName">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>getModuleFileByShortName
+            <span class="apidocSignatureSpan">(lmdDir, shortName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.getSuspiciousNames">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>getSuspiciousNames
+            <span class="apidocSignatureSpan">(config, deepModulesInfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.groupModulesByBundles">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>groupModulesByBundles
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.iterateModulesInfo">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>iterateModulesInfo
+            <span class="apidocSignatureSpan">(deepModulesInfo, iterator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.readConfig">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>readConfig
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.tryExtend">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>tryExtend
+            <span class="apidocSignatureSpan">(config, configDir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.lmd_common.wrapModule">
+            function <span class="apidocSignatureSpan">lmd.lmd_common.</span>wrapModule
+            <span class="apidocSignatureSpan">(code, moduleOptions, moduleType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.lmd_common.</span>GLOBALS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.lmd_common.</span>LMD_GLOBALS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.lmd_common.</span>LMD_PLUGINS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.lmd_common.</span>MASTER_FIELDS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.lmd_common.</span>NODE_GLOBALS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.lmd_common.</span>RE_LMD_FILE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.lmd_common.</span>SOURCE_TWEAK_FLAGS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">lmd.lmd_common.</span>WORKER_GLOBALS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">lmd.lmd_common.</span>LMD_JS_SRC_PATH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">lmd.lmd_common.</span>ROOT_BUNDLE_ID</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">lmd.lmd_common.</span>SUB_BUNDLE_SEPARATOR</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.super_">module lmd.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_">
+            function <span class="apidocSignatureSpan">lmd.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.super_.prototype">module lmd.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.prototype._push">
+            function <span class="apidocSignatureSpan">lmd.super_.prototype.</span>_push
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.prototype._read">
+            function <span class="apidocSignatureSpan">lmd.super_.prototype.</span>_read
+            <span class="apidocSignatureSpan">(size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.prototype._write">
+            function <span class="apidocSignatureSpan">lmd.super_.prototype.</span>_write
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.prototype.end">
+            function <span class="apidocSignatureSpan">lmd.super_.prototype.</span>end
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.super_.super_">module lmd.super_.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_">
+            function <span class="apidocSignatureSpan">lmd.super_.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.super_.super_.prototype">module lmd.super_.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.prototype._write">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.prototype.</span>_write
+            <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.prototype.end">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.prototype.</span>end
+            <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.prototype.write">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.prototype.</span>write
+            <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.super_.super_.super_.prototype">module lmd.super_.super_.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype._read">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>_read
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.addListener">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>addListener
+            <span class="apidocSignatureSpan">(ev, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.on">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>on
+            <span class="apidocSignatureSpan">(ev, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.pause">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.pipe">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>pipe
+            <span class="apidocSignatureSpan">(dest, pipeOpts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.push">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>push
+            <span class="apidocSignatureSpan">(chunk, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.read">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>read
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.resume">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>resume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.setEncoding">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>setEncoding
+            <span class="apidocSignatureSpan">(enc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.unpipe">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>unpipe
+            <span class="apidocSignatureSpan">(dest)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.unshift">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>unshift
+            <span class="apidocSignatureSpan">(chunk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.super_.super_.super_.prototype.wrap">
+            function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>wrap
+            <span class="apidocSignatureSpan">(stream)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.lmd.watch">module lmd.watch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.lmd.watch.watch">
+            function <span class="apidocSignatureSpan">lmd.</span>watch
+            <span class="apidocSignatureSpan">(configFile, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd" id="apidoc.module.lmd">module lmd</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Cli.LogWriter" id="apidoc.element.lmd.Cli.LogWriter">
+        function <span class="apidocSignatureSpan">lmd.</span>Cli.LogWriter
+        <span class="apidocSignatureSpan">(stream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Cli.LogWriter = function (stream) {
+    this.stream = stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer" id="apidoc.element.lmd.Writer">
+        function <span class="apidocSignatureSpan">lmd.</span>Writer
+        <span class="apidocSignatureSpan">(buildResult)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Writer = function (buildResult) {
+    this.source = buildResult;
+    this.cwd = process.cwd();
+    this.cli = new LogWriter(process.stdout);
+    this.pendingStreams = 0;
+    this.callback = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_" id="apidoc.element.lmd.super_">
+        function <span class="apidocSignatureSpan">lmd.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DataStream() {
+    Duplex.call(this);
+    this._finished = false;
+    this._receiverCapacity = 0;
+    this._buffer = new Buffer(0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_" id="apidoc.element.lmd.super_.super_">
+        function <span class="apidocSignatureSpan">lmd.</span>super_.super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Duplex(options) {
+  if (!(this instanceof Duplex))
+    return new Duplex(options);
+
+  Readable.call(this, options);
+  Writable.call(this, options);
+
+  if (options &#x26;&#x26; options.readable === false)
+    this.readable = false;
+
+  if (options &#x26;&#x26; options.writable === false)
+    this.writable = false;
+
+  this.allowHalfOpen = true;
+  if (options &#x26;&#x26; options.allowHalfOpen === false)
+    this.allowHalfOpen = false;
+
+  this.once(&#x27;end&#x27;, onend);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.watch" id="apidoc.element.lmd.watch">
+        function <span class="apidocSignatureSpan">lmd.</span>watch
+        <span class="apidocSignatureSpan">(configFile, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">watch = function (configFile, options) {
+    DataStream.call(this);
+    this.options = options || {};
+    var self = this;
+
+    this.configFile = configFile;
+
+    this.init();
+    this.sourceMap.readable = false;
+    this.readable = false;
+
+    // Let return instance before build
+    this.watchConfig = this.compileConfig(self.configFile, self.options);
+
+    this.makeEmptyStreamsUnreadable(this.watchConfig);
+
+    var isFatalErrors = !this.isAllModulesExists(this.watchConfig);
+    if (isFatalErrors) {
+        this.readable = false;
+    }
+    process.nextTick(function () {
+        if (!isFatalErrors) {
+            if (!configFile) {
+                return;
+            }
+
+            if (typeof self.watchConfig.output === &#x27;string&#x27;) {
+                self.fsWatch(self.watchConfig);
+                return;
+            } else {
+                self.log.write(&#x27;ERRO&#x27;.red.inverse + &#x27;:&#x27; + &#x27;    Check your config file. &#x22;output&#x22; parameter should be a {String} eg
+ &#x22;../path&#x22;&#x27;.red + &#x27;\n&#x27;);
+                return;
+            }
+        } else {
+            self.printFatalErrors(self.watchConfig);
+        }
+        self.closeStreams();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.Cli" id="apidoc.module.lmd.Cli">module lmd.Cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Cli.LogWriter" id="apidoc.element.lmd.Cli.LogWriter">
+        function <span class="apidocSignatureSpan">lmd.Cli.</span>LogWriter
+        <span class="apidocSignatureSpan">(stream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LogWriter = function (stream) {
+    this.stream = stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.Cli.LogWriter" id="apidoc.module.lmd.Cli.LogWriter">module lmd.Cli.LogWriter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Cli.LogWriter.LogWriter" id="apidoc.element.lmd.Cli.LogWriter.LogWriter">
+        function <span class="apidocSignatureSpan">lmd.Cli.</span>LogWriter
+        <span class="apidocSignatureSpan">(stream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LogWriter = function (stream) {
+    this.stream = stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.Cli.LogWriter.prototype" id="apidoc.module.lmd.Cli.LogWriter.prototype">module lmd.Cli.LogWriter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Cli.LogWriter.prototype.error" id="apidoc.element.lmd.Cli.LogWriter.prototype.error">
+        function <span class="apidocSignatureSpan">lmd.Cli.LogWriter.prototype.</span>error
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (message) {
+    this.log(&#x27;ERRO&#x27;.red.inverse + &#x27;:    &#x27; + message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Cli.LogWriter.prototype.help" id="apidoc.element.lmd.Cli.LogWriter.prototype.help">
+        function <span class="apidocSignatureSpan">lmd.Cli.LogWriter.prototype.</span>help
+        <span class="apidocSignatureSpan">(content, errorMessage)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">help = function (content, errorMessage) {
+    var help = [
+        &#x27;&#x27;,
+        &#x27;LMD Builder&#x27;,
+        &#x27;&#x27;
+    ];
+
+    help = help.concat(content);
+
+    if (errorMessage) {
+        help = help.concat([errorMessage.red, &#x27;&#x27;]);
+    }
+
+    help = help.map(function (line) {
+        return &#x27;help&#x27;.cyan + &#x27;:    &#x27; + line;
+    }).join(&#x27;\n&#x27;);
+
+    this.log(help);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Cli.LogWriter.prototype.log" id="apidoc.element.lmd.Cli.LogWriter.prototype.log">
+        function <span class="apidocSignatureSpan">lmd.Cli.LogWriter.prototype.</span>log
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (message) {
+    this.stream.write(message + &#x27;\n&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Cli.LogWriter.prototype.ok" id="apidoc.element.lmd.Cli.LogWriter.prototype.ok">
+        function <span class="apidocSignatureSpan">lmd.Cli.LogWriter.prototype.</span>ok
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ok = function (message) {
+    this.log(&#x27;info&#x27;.green + &#x27;:    &#x27; + message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Cli.LogWriter.prototype.warn" id="apidoc.element.lmd.Cli.LogWriter.prototype.warn">
+        function <span class="apidocSignatureSpan">lmd.Cli.LogWriter.prototype.</span>warn
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function (message) {
+    this.log(&#x27;warn&#x27;.yellow + &#x27;:    &#x27; + message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.Writer" id="apidoc.module.lmd.Writer">module lmd.Writer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.Writer" id="apidoc.element.lmd.Writer.Writer">
+        function <span class="apidocSignatureSpan">lmd.</span>Writer
+        <span class="apidocSignatureSpan">(buildResult)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Writer = function (buildResult) {
+    this.source = buildResult;
+    this.cwd = process.cwd();
+    this.cli = new LogWriter(process.stdout);
+    this.pendingStreams = 0;
+    this.callback = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.Writer.prototype" id="apidoc.module.lmd.Writer.prototype">module lmd.Writer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype._isCanWriteStream" id="apidoc.element.lmd.Writer.prototype._isCanWriteStream">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_isCanWriteStream
+        <span class="apidocSignatureSpan">(stream, fileName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_isCanWriteStream = function (stream, fileName) {
+    return fileName &#x26;&#x26; stream &#x26;&#x26; stream.readable;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype._logResult" id="apidoc.element.lmd.Writer.prototype._logResult">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_logResult
+        <span class="apidocSignatureSpan">(stream, fileName, resourceName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_logResult = function (stream, fileName, resourceName) {
+    var cli = this.cli;
+
+    if (this._isCanWriteStream(stream, fileName)) {
+        stream.once(&#x27;end&#x27;, function () {
+            cli.ok(&#x27;Writing &#x27; + resourceName + &#x27; to &#x27; + fileName.green);
+        });
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype._onAllEnd" id="apidoc.element.lmd.Writer.prototype._onAllEnd">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_onAllEnd
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onAllEnd = function (callback) {
+    this.callback = callback;
+
+    var self = this,
+        bundles = this.source.bundles;
+
+    Object.keys(bundles)
+        .map(function (bundleName) {
+            return bundles[bundleName];
+        })
+        .concat([this.source, this.source.log])
+        .forEach(function (stream) {
+            if (!stream.readable) {
+                return;
+            }
+
+            self._waitFor(stream, &#x27;end&#x27;);
+        });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype._pipeStreamToFile" id="apidoc.element.lmd.Writer.prototype._pipeStreamToFile">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_pipeStreamToFile
+        <span class="apidocSignatureSpan">(stream, fileName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_pipeStreamToFile = function (stream, fileName) {
+    if (this._isCanWriteStream(stream, fileName)) {
+        var writer = fs.createWriteStream(fileName, {
+            flags: &#x22;w&#x22;,
+            encoding: &#x22;utf8&#x22;,
+            mode: 0666
+        });
+
+        this._waitFor(writer, &#x27;close&#x27;);
+
+        stream.pipe(writer);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype._resolvePaths" id="apidoc.element.lmd.Writer.prototype._resolvePaths">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_resolvePaths
+        <span class="apidocSignatureSpan">(buildConfig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_resolvePaths = function (buildConfig) {
+    var cwd = this.cwd,
+        configs = path.join(cwd, &#x27;.lmd&#x27;),
+        root = path.resolve(configs, buildConfig.root || &#x27;&#x27;),
+        sourceMap = buildConfig.sourcemap ? path.resolve(root, buildConfig.sourcemap) : null,
+        source = buildConfig.output ? path.resolve(root, buildConfig.output) : null,
+        style = buildConfig.styles_output ? path.resolve(root, buildConfig.styles_output) : null;
+
+    return {
+        configs: configs,
+        root: root,
+        sourceMap: sourceMap,
+        source: source,
+        style: style
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype._streamEnd" id="apidoc.element.lmd.Writer.prototype._streamEnd">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_streamEnd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_streamEnd = function () {
+    var self = this;
+
+    this.pendingStreams--;
+    if (this.callback &#x26;&#x26; this.pendingStreams &#x3c;= 0) {
+        // setImmediate
+        setTimeout(function () {
+            self.callback();
+        }, 0);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype._waitFor" id="apidoc.element.lmd.Writer.prototype._waitFor">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_waitFor
+        <span class="apidocSignatureSpan">(stream, event)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_waitFor = function (stream, event) {
+    var self = this;
+
+    if (!stream) {
+        return;
+    }
+
+    this.pendingStreams++;
+    stream.once(event, function () {
+        self._streamEnd();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype._writeStreamsTo" id="apidoc.element.lmd.Writer.prototype._writeStreamsTo">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>_writeStreamsTo
+        <span class="apidocSignatureSpan">(stream, paths, resourceName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_writeStreamsTo = function (stream, paths, resourceName) {
+    this._logResult(stream, paths.source, &#x27;LMD &#x27; + resourceName);
+    this._pipeStreamToFile(stream, paths.source);
+
+    this._logResult(stream.sourceMap, paths.sourceMap, &#x27;Source Map of &#x27; + resourceName);
+    this._pipeStreamToFile(stream.sourceMap, paths.sourceMap);
+
+    this._logResult(stream.style, paths.style, &#x27;Style of &#x27; + resourceName);
+    this._pipeStreamToFile(stream.style, paths.style);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype.logTo" id="apidoc.element.lmd.Writer.prototype.logTo">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>logTo
+        <span class="apidocSignatureSpan">(cli)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logTo = function (cli) {
+    if (!(cli instanceof LogWriter)) {
+        throw new TypeError(&#x27;cli should be instance of LogWriter&#x27;);
+    }
+
+    this.cli = cli;
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype.relativeTo" id="apidoc.element.lmd.Writer.prototype.relativeTo">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>relativeTo
+        <span class="apidocSignatureSpan">(cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">relativeTo = function (cwd) {
+    this.cwd = cwd;
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.Writer.prototype.writeAll" id="apidoc.element.lmd.Writer.prototype.writeAll">
+        function <span class="apidocSignatureSpan">lmd.Writer.prototype.</span>writeAll
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeAll = function (callback) {
+    var cli = this.cli,
+        self = this,
+        source = this.source,
+
+        buildConfig = this.source.buildConfig,
+        configFile = this.source.configFile,
+        buildName = path.basename(configFile).split(&#x27;.lmd&#x27;)[0],
+
+        paths = this._resolvePaths(buildConfig),
+
+        isPrintToStdout = paths.source === null,
+        isCanLog = buildConfig.log &#x26;&#x26; !isPrintToStdout;
+
+    // fatal error
+    if (source.readable === false &#x26;&#x26; isCanLog) {
+        source.log.pipe(cli.stream);
+        callback(&#x27;fatal&#x27;);
+        return;
+    }
+
+    if (isPrintToStdout) {
+        source.pipe(cli.stream);
+        callback(null);
+        return;
+    }
+
+    this._onAllEnd(callback);
+
+    if (isCanLog) {
+        var versionString = buildConfig.version ? &#x27; - version &#x27; + buildConfig.version.toString().cyan : &#x27;&#x27;;
+        cli.ok(&#x27;Building `&#x27; + buildName.green +  &#x27;` (&#x27; + (&#x27;.lmd/&#x27; + buildName + &#x27;.lmd.js(on)&#x27;).green + &#x27;)&#x27; + versionString);
+        if (buildConfig.mixins &#x26;&#x26; buildConfig.mixins.length) {
+            cli.ok(&#x27;Extra mixins &#x27; + buildConfig.mixins.map(function (mixinName) {
+                return mixinName.green
+            }).join(&#x27;, &#x27;));
+        }
+    }
+
+    // Print package
+    this._writeStreamsTo(source, paths, &#x27;Package&#x27;);
+
+    // Print bundles
+    var bundles = buildConfig.bundles;
+    Object.keys(bundles).forEach(function (bundleName) {
+        var stream = source.bundles[bundleName],
+            paths = self._resolvePaths(bundles[bundleName]);
+
+        self._writeStreamsTo(stream, paths, &#x27;Bundle &#x27; + bundleName.green);
+    });
+
+    // Print warnings log
+    if (isCanLog) {
+        source.log.pipe(cli.stream);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.coverage_apply" id="apidoc.module.lmd.coverage_apply">module lmd.coverage_apply</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.coverage_apply.interpret" id="apidoc.element.lmd.coverage_apply.interpret">
+        function <span class="apidocSignatureSpan">lmd.coverage_apply.</span>interpret
+        <span class="apidocSignatureSpan">(moduleName, file, content, lineOffset, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">interpret = function (moduleName, file, content, lineOffset, options) {
+	options = options || {
+		&#x22;function&#x22; : true,
+		&#x22;condition&#x22; : true
+	};
+
+	try {
+		var tree = parser.parse(content, false, true);
+	} catch (e) {
+		return {
+            error: &#x22;Error instrumentig file &#x22; + file + &#x22; &#x22; + e.message
+        }
+	}
+
+	var walker = uglify.ast_walker();
+	// this is the list of nodes being analyzed by the walker
+	// without this, w.walk(this) would re-enter the newly generated code with infinite recursion
+	var analyzing = [];
+	// list of all lines&#x27; id encounterd in this file
+	var lines = [];
+	// list of all conditions&#x27; id encounterd in this file
+	var allConditions = [];
+	// list of all functions&#x27; id encounterd in this file
+	var allFunctions = [];
+	// anonymous function takes the name of their var definition
+	var candidateFunctionName = null;
+
+    var isFirstFunction = true,
+        isFirstLine = true;
+
+	<span class="apidocCodeCommentSpan">/**
+	 * A statement was found in the file, remember its id.
+	 */
+</span>	function rememberStatement (id) {
+		lines.push(id);
+	};
+
+	/**
+	 * A function was found in the file, remember its id.
+	 */
+	function rememberFunction (id) {
+		allFunctions.push(id);
+	};
+
+	/**
+	 * Generic function for counting a line.
+	 * It generates a lineId from the line number and the block name (in minified files there
+	 * are more logical lines on the same file line) and adds a function call before the actual
+	 * line of code.
+	 *
+	 * &#x27;this&#x27; is any node in the AST
+	 */
+	function countLine() {
+		var ret;
+        // skip first line
+        if (isFirstLine) {
+            isFirstLine = false;
+            return ret;
+        }
+		if (this[0].start &#x26;&#x26; analyzing.indexOf(this) &#x3c; 0) {
+			giveNameToAnonymousFunction.call(this);
+			var lineId = this[0].start.line + lineOffset + &#x27;&#x27;; //this[0].name + &#x27;:&#x27; + this[0].start.line + &#x22;:&#x22; + this[0].start.pos;
+			rememberStatement(lineId);
+
+			analyzing.push(this);
+			ret = [ &#x22;splice&#x22;,
+				[
+					[ &#x22;stat&#x22;,
+						[ &#x22;call&#x22;,
+                            [&#x22;dot&#x22;, [&#x22;name&#x22;, &#x22;require&#x22;], &#x22;coverage_line&#x22;],
+							[
+								[ &#x22;string&#x22;, moduleName],
+								[ &#x22;string&#x22;, lineId]
+							]
+						]
+					],
+					walker.walk(this)
+				]
+			];
+			analyzing.pop(this);
+		}
+		return ret;
+	};
+
+	/**
+	 * Walker for &#x27;if&#x27; nodes. It overrides countLine because we want to instrument conditions.
+	 *
+	 * &#x27;this&#x27; is an if node, so
+	 *    &#x27;this[0]&#x27; is the node descriptor
+	 *    &#x27;this[1]&#x27; is the decision block
+	 *    &#x27;this[2]&#x27; is the &#x27;then&#x27; code block
+	 *    &#x27;this[3]&#x27; is the &#x27;else&#x27; code block
+	 *
+	 * Note that if/else if/else in AST are represented as nested if/else
+	 */
+	function countIf() {
+		var self = this, ret;
+		if (self[0].start &#x26;&#x26; analyzing.indexOf(self) &#x3c; 0) {
+			var decision = self[1];
+			var lineId = self[0].name + &#x27;:&#x27; + (self[0].start.line + lineOffset);
+
+			self[1] = wrapCondition(decision, lineId);
+
+			// We are adding new lines, make sure code blocks are actual blocks
+			if (self[2] &#x26;&#x26; self[2][0].start &#x26;&#x26; self[2][0].start.value != &#x22;{&#x22;) {
+				self[2] = [ &#x22;block&#x22;, [self[2]]];
+			}
+
+			if (self[3] &#x26;&#x26; self[3][0].start &#x26;&#x26; self[3][0].start.value != &#x22;{&#x22;) {
+				self[3] = [ &#x22;block&#x22;, [self[3]]];
+			}
+		}
+
+		ret = countLine.call(self);
+
+		if (decision) {
+			analyzing.pop(decision);
+		}
+
+		return ret;
+	};
+
+	/**
+	 * This is the key function for condition coverage as it wraps every condition in
+	 * a function call.
+	 * The condition id is generated fron the lineId (@see countLine) plus the character
+	 * position of the condition.
+	 */
+	function wrapCondition(decision, lineId, parentPos) {
+		if (options.condition === false) {
+			// condition coverage is disabled
+			return decision;
+		}
+
+		if (isSingleCondition(decision)) {
+			var pos = getPositionStart(decision, parentPos);
+			var condId = lineId + &#x22;:&#x22; + pos;
+
+			analyzing.push(decision);
+			allConditions.push(condId);
+			return [&#x22;call&#x22;,
+                [&#x22;dot&#x22;, [&#x22;name&#x22;, &#x22;require&#x22;], &#x22;coverage_condition&#x22;],
+				[
+					[ &#x22;string&#x22;, moduleName ],
+					[ &#x22;string&#x22;, condId],
+					decision
+				]
+			];
+		} else {
+			decision[2] = wrapCondition(decision[2], lineId, getPositionStart(decision, parentPos));
+			decision[3] = wrapCondition(decision[3], ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.lmd_common" id="apidoc.module.lmd.lmd_common">module lmd.lmd_common</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.analiseModuleContent" id="apidoc.element.lmd.lmd_common.analiseModuleContent">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>analiseModuleContent
+        <span class="apidocSignatureSpan">(moduleOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">analiseModuleContent = function (moduleOptions) {
+    var moduleDescriptor = {
+            type: &#x22;&#x22;,
+            warns: [],
+            code: null,
+            originalCode: null,
+            depends: [],
+            features: {}
+        };
+
+    if (moduleOptions.is_shortcut) {
+        moduleDescriptor.type = &#x22;shortcut&#x22;;
+        moduleDescriptor.features.shortcuts = true;
+
+        return moduleDescriptor;
+    }
+
+    if (!moduleOptions.is_exists) {
+        moduleDescriptor.type = &#x22;not-exists&#x22;;
+
+        return moduleDescriptor;
+    }
+
+    var modulePath = [].concat(moduleOptions.path);
+
+    var code = modulePath.map(function (modulePath) {
+        return fs.readFileSync(modulePath, &#x27;utf8&#x27;);
+    }).join(&#x27;\n/* joined by builder */\n&#x27;);
+
+    var ast;
+
+    moduleDescriptor.code = code;
+    moduleDescriptor.originalCode = code;
+
+    try {
+        JSON.parse(code);
+        moduleDescriptor.type = &#x22;json&#x22;;
+        return moduleDescriptor;
+    } catch (e) {}
+
+    try {
+        ast = parser.parse(code);
+    } catch (e) {
+        moduleDescriptor.type = &#x22;string&#x22;;
+
+        var isOneOfModulesIsJs = modulePath.some(function (modulePath) {
+            return /.js$/.test(modulePath);
+        });
+
+        if (isOneOfModulesIsJs) {
+            moduleDescriptor.type = &#x22;string&#x22;;
+            moduleDescriptor.warns
+                .push(&#x27;File &#x22;**&#x27; + modulePath.join(&#x27;**&#x22;, &#x22;**&#x27;) + &#x27;**&#x22; has extension **.js** and LMD detect an parse error. \n&#x27; +
+                    e.toString().red +
+                    &#x27;\nThis module will be string. Please check the source.&#x27;);
+        }
+        return moduleDescriptor;
+    }
+
+    if (moduleOptions.is_third_party) {
+        moduleDescriptor.type = &#x22;3-party&#x22;;
+    } else {
+        moduleDescriptor.type = getModuleType(ast);
+    }
+
+    // Apply type type hint
+    if (moduleOptions.type_hint) {
+        // Unexpected module type
+        if (!MODULE_TYPE_HINTS.hasOwnProperty(moduleOptions.type_hint)) {
+            moduleDescriptor.warns
+                .push(&#x27;Unexpected module type hint `&#x27; + moduleOptions.type_hint + &#x27;` of module &#x22;&#x27; + String(moduleOptions.name).green
+ + &#x27;&#x22;. &#x27; +
+                    &#x27;Only these types are supported: &#x27; + Object.keys(MODULE_TYPE_HINTS).join(&#x27;, &#x27;));
+        } else {
+            // Good type hint
+            moduleDescriptor.type = moduleOptions.type_hint;
+        }
+    }
+
+    moduleDescriptor.code = wrapModule(moduleDescriptor.code, moduleOptions, moduleDescriptor.type);
+
+    if (moduleDescriptor.type === &#x27;3-party&#x27;) {
+        var extraRequires = []
+            .concat(collect3partyDepends(moduleOptions.extra_bind))
+            .concat(collect3partyDepends(moduleOptions.extra_require));
+
+        if (extraRequires.length &#x26;&#x26; moduleOptions.is_sandbox) {
+            moduleDescriptor.warns
+                .push(&#x27;Your module &#x22;**&#x27; + modulePath.join(&#x27;**&#x22;, &#x22;**&#x27;) + &#x27;**&#x22; have to require() some dependencies, but it is sandboxed
+. &#x27; +
+                &#x27;Remove sandbox flag to allow module require().&#x27;);
+        }
+
+        Array.prototype.push.apply(moduleDescriptor.depends, extraRequires);
+    }
+
+    var requireExpressions = findRequireAccesses(ast, moduleDescriptor.type),
+        analyticsResult = findModuleRequirementsAndFeatures(requireExpressions);
+
+    moduleDescriptor.features = analyticsResult.features;
+    moduleDescriptor.depends = moduleDescriptor.depends.concat(analyticsResult.depends);
+
+    moduleDescriptor.depends = moduleDescriptor.depends.filter(function(item, index, array) {
+        return array.indexOf(item, index + 1) &#x3c; 0;
+    });
+
+    if (moduleDescriptor.type === &#x22;amd&#x22;) {
+        moduleDescriptor.features.amd = true;
+        moduleDescriptor.depends = addExtraAmdDepends(ast, moduleDescriptor.depends);
+    }
+
+    return moduleDescriptor;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.assembleLmdConfig" id="apidoc.element.lmd.lmd_common.assembleLmdConfig">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>assembleLmdConfig
+        <span class="apidocSignatureSpan">(configFile, flagsNames, extraOptions, usedConfigs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assembleLmdConfig = function (configFile, flagsNames, extraOptions, usedConfigs) {
+    var configDir = path.dirname(configFile),
+        rawConfig = readConfig(configFile);
+
+    configFile = fs.realpathSync(configFile);
+    return assembleLmdConfigAsObject(rawConfig, configFile, configDir, flagsNames, extraOptions, usedConfigs);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.collectFlagsNotifications" id="apidoc.element.lmd.lmd_common.collectFlagsNotifications">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>collectFlagsNotifications
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">collectFlagsNotifications = function (config) {
+    var result = [], dependsOf;
+    if (config.plugins_depends) {
+        for (var dependsName in config.plugins_depends) {
+            dependsOf = config.plugins_depends[dependsName];
+
+            result.push(&#x27;Extra plugin was added &#x27; + (&#x27;&#x22;&#x27; + dependsName + &#x27;&#x22;&#x27;).green + &#x27;: &#x27; + &#x27;true&#x27;.green + &#x27;. This is depends of
+ &#x27; + dependsOf.join(&#x27;, &#x27;).cyan + &#x27;.&#x27;);
+        }
+    }
+
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.collectFlagsWarnings" id="apidoc.element.lmd.lmd_common.collectFlagsWarnings">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>collectFlagsWarnings
+        <span class="apidocSignatureSpan">(config, deepModulesInfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">collectFlagsWarnings = function (config, deepModulesInfo) {
+    var featureWarnings = {},
+        result = [],
+        is_using_shortcuts = false,
+        is_using_amd = false;
+
+    // aggregate usage
+    iterateModulesInfo(deepModulesInfo, function (module, moduleName, bundleName) {
+        if (module.type === &#x22;amd&#x22;) {
+            is_using_amd = true;
+        }
+        if (module.type === &#x22;shortcut&#x22;) {
+            is_using_shortcuts = true;
+        }
+        var features = module.features;
+        for (var featureName in features) {
+            if (typeof config[featureName] === &#x22;undefined&#x22; || config[featureName] === false) {
+                if (!featureWarnings[featureName]) {
+                    featureWarnings[featureName] = [];
+                }
+                if (bundleName === ROOT_BUNDLE_ID) {
+                    featureWarnings[featureName].push(moduleName);
+                } else {
+                    featureWarnings[featureName].push(bundleName + SUB_BUNDLE_SEPARATOR + moduleName);
+                }
+            }
+        }
+    });
+
+    for (var featureName in featureWarnings) {
+        result.push(&#x22;Required &#x22; + (&#x22;\&#x22;&#x22; + featureName + &#x22;\&#x22;&#x22;).green + &#x22;: &#x22; + &#x22;true&#x22;.green +
+                    &#x22;. Some of your modules (&#x22; + (featureWarnings[featureName].join(&#x27;, &#x27;)).cyan + &#x22;) are uses feature &#x22; + (&#x22;`&#x22; +
+featureName + &#x22;`&#x22;).green + &#x22;, &#x22; +
+                    &#x22;but it disable in this build.&#x22;);
+    }
+
+    if (!is_using_shortcuts &#x26;&#x26; config.shortcuts) {
+        result.push(&#x27;Config flag &#x27; + &#x27;`shortcuts`&#x27;.green + &#x27; is enabled, but there is no shortcuts in your package. &#x27; +
+                  &#x27;Disable that flag to optimize your package.&#x27;);
+    }
+
+    if (!is_using_amd &#x26;&#x26; config.amd) {
+        result.push(&#x27;Config flag &#x27; + &#x27;`amd`&#x27;.green + &#x27; is enabled, but there is no AMD Modules in your package. &#x27; +
+                  &#x27;Disable that flag to optimize your package.&#x27;);
+    }
+
+    if (config.stats_coverage &#x26;&#x26; (config.cache || config.cache_async)) {
+        result.push(&#x27;LMD will cache your modules under code coverage. You can disable &#x27; + &#x27;`cache`&#x27;.green + &#x27; and &#x27; + &#x27;`cache_async
+`&#x27;.green + &#x27; flags.&#x27;);
+    }
+
+    if (config.async_plain &#x26;&#x26; config.async_plainonly) {
+        result.push(&#x27;You are using both config flags &#x27; + &#x27;`async_plain`&#x27;.green + &#x27; and &#x27; + &#x27;`async_plainonly`&#x27;.green + &#x27;. Disable
+ one to optimise your source.&#x27;);
+    }
+
+    if (!config.stats_coverage &#x26;&#x26; config.stats_coverage_async) {
+        result.push(&#x27;You are using &#x27; + &#x27;`stats_coverage_async`&#x27;.green + &#x27; without &#x27; + &#x27;`stats_coverage`&#x27;.green + &#x27;. Enable &#x27; + &#x27;`
+stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
+    }
+
+    if (!config.async &#x26;&#x26; config.stats_coverage_async) {
+        result.push(&#x27;You are using &#x27; + &#x27;`stats_coverage_async`&#x27;.green + &#x27; but not using &#x27; + &#x27;`async`&#x27;.green + &#x27;. Disable &#x27; + &#x27;`stats_coverage_async
+`&#x27;.green + &#x27; flag.&#x27;);
+    }
+
+    if (&#x27;promise&#x27; in config &#x26;&#x26; typeof config.promise !== &#x22;string&#x22;) {
+        result.push(&#x27;`promise`&#x27;.green + &#x27; should be a string pointing to the deferred factory function. eg &#x27; + &#x27;&#x22;promise&#x22;&#x27;.green
+ + &#x27;: &#x27; + &#x27;&#x22;$.Deferred&#x22;&#x27;.green);
+    }
+
+    if (&#x27;banner&#x27; in config) {
+        if (typeof config.banner !== &#x27;string&#x27;) {
+            result.push(&#x27;`banner`&#x27;.green + &#x27; should be a string&#x27;);
+        } else {
+            // Banner should not contain any javascript. Checking it.
+            try {
+                var ast = parser.parse(config.banner);
+                if (ast[1].length !== 0) {
+                    result.push(&#x27;`banner`&#x27;.green + &#x27; should be a JavaScript comment. Please remove any executable JavaScript from
+ &#x27; + &#x27;`banner`&#x27;.green + &#x27;.&#x27;);
+                }
+            } catch (e) {
+                result.push(&#x27;Something is wrong with your &#x27; + &#x27;`banner`&#x27;.green + &#x27;, please check it&#x27;);
+            }
+        }
+    }
+
+    var warnings = {
+        globals: &#x27;Some of your modules are undeclared (register them as &#x27; + &#x27;&#x22;name&#x22;&#x27;.green + &#x27;: &#x27; + &#x27;&#x22;@shortcut&#x22;&#x27;.green + &#x27; or use
+ directly if they are globals):&#x27;,
+        modules: &#x27;Some of our modules are probably off-package (you can register them as &#x27; + &#x27;&#x22;name&#x22;&#x27;.green + &#x27;: &#x27; + &#x27;&#x22;@shortcut
+&#x22;&#x27;.green + &#x27;):&#x27;,
+        unused: &#x27;Some of your modu ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.collectModules" id="apidoc.element.lmd.lmd_common.collectModules">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>collectModules
+        <span class="apidocSignatureSpan">(config, configDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">collectModules = function (config, configDir) {
+    var modules = {},
+        globalLazy = config.lazy || false,
+        globalDepends = (config.depends === true ? DEFAULT_DEPENDS_MASK : config.depends) || false,
+        moduleLazy = false,
+        moduleTypeHint,
+        moduleName,
+        modulePath,
+        moduleRealPath,
+        moduleExists,
+        moduleExports,
+        moduleRequire,
+        moduleBind,
+        moduleFileName,
+        moduleFilePath,
+        moduleDesciptor,
+        wildcardRegex,
+        isMultiPathModule,
+        moduleData,
+        isThirdPartyModule,
+        modulesDirPath = config.root || config.path || &#x27;&#x27;;
+
+    modulesDirPath = path.resolve(configDir, modulesDirPath);
+
+    // grep paths
+    for (moduleName in config.modules) {
+        moduleDesciptor = config.modules[moduleName];
+        // case &#x22;moduleName&#x22;: null
+        // case &#x22;moduleName&#x22;: &#x22;path/to/module.js&#x22;
+        if (moduleDesciptor === null || typeof moduleDesciptor === &#x22;string&#x22; || Array.isArray(moduleDesciptor)) {
+            moduleTypeHint = false;
+            moduleExports = false;
+            moduleRequire = false;
+            moduleBind = false;
+            modulePath = moduleDesciptor;
+            moduleLazy = globalLazy;
+        } else { // case &#x22;moduleName&#x22;: {&#x22;path&#x22;: &#x22;path/to/module.js&#x22;, &#x22;lazy&#x22;: false}
+            moduleTypeHint = moduleDesciptor.type || false;
+            moduleExports = moduleDesciptor.exports || false;
+            moduleRequire = moduleDesciptor.require || false;
+            moduleBind = moduleDesciptor.bind || moduleDesciptor[&#x27;this&#x27;] || false;
+            modulePath = moduleDesciptor.path;
+            moduleLazy = moduleDesciptor.lazy || false;
+            moduleTypeHint = moduleDesciptor.type || false;
+        }
+
+        isMultiPathModule = false;
+        if (Array.isArray(modulePath)) {
+            // Try to glob
+            // case when [&#x27;jquery*.js&#x27;]
+            modulePath = modulePath.reduce(function (paths, modulePath) {
+                if (globPattern.test(modulePath)) {
+                    modulePath = glob.sync(modulePath, {
+                        cwd: modulesDirPath,
+                        nosort: true
+                    }) || [];
+                }
+
+                return paths.concat(modulePath);
+            }, []);
+
+            // case when [&#x27;jquery.js&#x27;]
+            if (modulePath.length === 1) {
+                modulePath = modulePath[0];
+            } else {
+                isMultiPathModule = true;
+            }
+        }
+
+        isThirdPartyModule = !!moduleExports || !!moduleRequire || !!moduleBind;
+
+        // Override if cache flag = true
+        if (config.cache) {
+            moduleLazy = true;
+        }
+
+        // its a glob pattern
+        // @see https://github.com/isaacs/node-glob
+        if (!isMultiPathModule &#x26;&#x26; globPattern.test(modulePath)) {
+            var globModules = glob.sync(modulePath, {
+                cwd: modulesDirPath,
+                nosort: true
+            });
+
+            // * -&#x3e; &#x3c;%= file =&#x3e; for backward capability
+            var moduleNameTemplate = template(moduleName.replace(&#x27;*&#x27;, &#x27;&#x3c;%= file %&#x3e;&#x27;));
+
+            globModules.forEach(function (module) {
+                var moduleRealPath = path.join(modulesDirPath, module),
+                    basename = path.basename(moduleRealPath),
+                    fileParts = basename.split(&#x27;.&#x27;),
+                    ext = fileParts.pop(),
+                    file = fileParts.join(&#x27;.&#x27;),
+                    dir = path.dirname(moduleRealPath).split(path.sep).reverse(),
+                    subdir = createSubdirTemplateVariable(modulesDirPath, moduleRealPath);
+
+                // modify module name using template
+                var newModuleName = moduleNameTemplate({
+                    basename: basename,
+                    file: file,
+                    ext: ext,
+                    dir: dir,
+                    subdir: subdir
+                });
+
+                moduleExists = true;
+                try {
+                    moduleRealPath = fs.realpathSync(moduleRealPath);
+                } catch (e) {
+                    modul ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.collectModulesInfo" id="apidoc.element.lmd.lmd_common.collectModulesInfo">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>collectModulesInfo
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">collectModulesInfo = function (config) {
+    var result = {};
+
+    var bundles = groupModulesByBundles(config);
+    iterateModulesInfo(bundles, function (moduleOptions, moduleName, bundleName) {
+        if (!result[bundleName]) {
+            result[bundleName] = {};
+        }
+        result[bundleName][moduleName] = analiseModuleContent(moduleOptions);
+    });
+
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.deepDestructableMerge" id="apidoc.element.lmd.lmd_common.deepDestructableMerge">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>deepDestructableMerge
+        <span class="apidocSignatureSpan">(left, right)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deepDestructableMerge = function (left, right) {
+    for (var prop in right) {
+        if (right.hasOwnProperty(prop))  {
+            if (typeof left[prop] === &#x22;object&#x22;) {
+                deepDestructableMerge(left[prop], right[prop]);
+            } else {
+                left[prop] = right[prop];
+            }
+        }
+    }
+    return left;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.discoverModuleType" id="apidoc.element.lmd.lmd_common.discoverModuleType">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>discoverModuleType
+        <span class="apidocSignatureSpan">(moduleName, modulesNames, globalsNames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function discoverModuleType(moduleName, modulesNames, globalsNames) {
+    if (moduleName instanceof RegExp) {
+        return &#x27;regexp&#x27;;
+    }
+
+    if (modulesNames.indexOf(moduleName) != -1) {
+        return &#x27;in-package&#x27;;
+    }
+
+    if (typeof globalsNames[moduleName] !== &#x22;undefined&#x22;) {
+        return &#x27;global&#x27;;
+    }
+
+    if (/\.[a-z]{1,}$/.test(moduleName)) {
+        return &#x27;off-package?&#x27;;
+    }
+
+    return &#x27;global?&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.getGlobals" id="apidoc.element.lmd.lmd_common.getGlobals">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>getGlobals
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getGlobals(config) {
+    var result = {},
+        names = [&#x27;GLOBALS&#x27;];
+
+    if (config.node) {
+        names.push(&#x27;NODE_GLOBALS&#x27;);
+    }
+
+    if (config.worker) {
+        names.push(&#x27;WORKER_GLOBALS&#x27;);
+    }
+
+    names.forEach(function (name) {
+        var globalNames = exports[name];
+        for (var name in globalNames) {
+            result[name] = globalNames[name];
+        }
+    });
+
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.getModuleFileByShortName" id="apidoc.element.lmd.lmd_common.getModuleFileByShortName">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>getModuleFileByShortName
+        <span class="apidocSignatureSpan">(lmdDir, shortName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getModuleFileByShortName(lmdDir, shortName) {
+    var files;
+
+    try {
+        files = fs.readdirSync(lmdDir);
+    } catch (e) {
+        return void 0;
+    }
+
+    for (var i = 0, c = files.length, fileName; i &#x3c; c; i++) {
+        fileName = files[i];
+        var fileExtension = (fileName.match(reLmdFile) || 0)[0];
+        if (fileExtension &#x26;&#x26; path.basename(fileName, fileExtension) === shortName) {
+            return fileName;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.getSuspiciousNames" id="apidoc.element.lmd.lmd_common.getSuspiciousNames">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>getSuspiciousNames
+        <span class="apidocSignatureSpan">(config, deepModulesInfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSuspiciousNames(config, deepModulesInfo) {
+    var globalsNames = getGlobals(config),
+        suspiciousNames = {
+            globals: [],
+            modules: [],
+            unused: [],
+            conflicts: {}
+        },
+        suspiciousNamesIndex = {
+            globals: {},
+            modules: {},
+            unused: {}
+        };
+
+    // list of RegExp that require.match() is using
+    var matchRegExpList = [];
+
+    var bundles = groupModulesByBundles(config);
+
+    // all module names
+    var modulesNames = [];
+    iterateModulesInfo(bundles, function (module, name, bundleName) {
+        modulesNames.push(name);
+    });
+
+    function isMainModuleOf(name, bundleName) {
+        if (bundleName === ROOT_BUNDLE_ID) {
+            return config.main === name;
+        }
+        if (config.bundles[bundleName]) {
+            return config.bundles[bundleName].main === name;
+        }
+        return false;
+    }
+
+    iterateModulesInfo(bundles, function (module, name, bundleName) {
+        if (!suspiciousNamesIndex.unused.hasOwnProperty(name)) {
+            suspiciousNamesIndex.unused[name] = false;
+        }
+
+        // count names across bundles
+        if (!suspiciousNames.conflicts[name]) {
+            suspiciousNames.conflicts[name] = [];
+        }
+        // do not count main modules they can&#x27;t conflict
+        if (!isMainModuleOf(name, bundleName)) {
+            suspiciousNames.conflicts[name].push(bundleName);
+        }
+
+        var depends = deepModulesInfo[bundleName][name].depends;
+        depends.forEach(function (name) {
+            var moduleType = discoverModuleType(name, modulesNames, globalsNames);
+
+            // Add this regexp list to use later
+            if (moduleType === &#x27;regexp&#x27;) {
+                matchRegExpList.push(name);
+                return;
+            }
+
+            // skip special LMD names
+            if (typeof exports.LMD_GLOBALS[name] !== &#x22;undefined&#x22;) {
+                return;
+            }
+
+            if (moduleType === &#x27;global?&#x27; &#x26;&#x26; !suspiciousNamesIndex.globals[name]) {
+                suspiciousNamesIndex.globals[name] = true;
+                suspiciousNames.globals.push(name);
+            }
+
+            if (moduleType === &#x27;off-package?&#x27; &#x26;&#x26; !suspiciousNamesIndex.modules[name]) {
+                suspiciousNamesIndex.modules[name] = true;
+                suspiciousNames.modules.push(name);
+            }
+
+            suspiciousNamesIndex.unused[name] = true;
+        });
+    });
+
+    // add unused
+    iterateModulesInfo(bundles, function (module, name, bundleName) {
+        if (config.main === name) {
+            return;
+        }
+        if (!suspiciousNamesIndex.unused[name]) {
+            // If one of module.match() regex matches name - module is used
+            // do not add it to unused list
+            var isMatch = matchRegExpList.some(function (regexp) {
+                return regexp.test(name);
+            });
+
+            if (!isMatch) {
+                suspiciousNames.unused.push(name);
+            }
+        }
+    });
+
+    // Cleanup module names without conflicts across bundles
+    var conflicts = suspiciousNames.conflicts;
+    suspiciousNames.conflicts = Object.keys(conflicts).reduce(function (result, moduleName) {
+        if (conflicts[moduleName].length &#x3e; 1) {
+            result[moduleName] = conflicts[moduleName];
+        }
+
+        return result;
+    }, {});
+
+    return suspiciousNames;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.groupModulesByBundles" id="apidoc.element.lmd.lmd_common.groupModulesByBundles">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>groupModulesByBundles
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">groupModulesByBundles = function (config) {
+    var bundles = {};
+
+    bundles[ROOT_BUNDLE_ID] = config.modules || {};
+    Object.keys(config.bundles || {}).forEach(function (bundleName) {
+        bundles[bundleName] = config.bundles[bundleName].modules;
+    });
+
+    return bundles;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.iterateModulesInfo" id="apidoc.element.lmd.lmd_common.iterateModulesInfo">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>iterateModulesInfo
+        <span class="apidocSignatureSpan">(deepModulesInfo, iterator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">iterateModulesInfo = function (deepModulesInfo, iterator) {
+    Object.keys(deepModulesInfo).forEach(function (bundleName) {
+        var modules = deepModulesInfo[bundleName];
+        if (!modules) {
+            return;
+        }
+        Object.keys(modules).forEach(function (moduleName) {
+            iterator(modules[moduleName], moduleName, bundleName);
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.readConfig" id="apidoc.element.lmd.lmd_common.readConfig">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>readConfig
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readConfig = function (file) {
+    file = path.join.apply(path, arguments);
+
+    var fileContent = fs.readFileSync(file, &#x27;utf8&#x27;),
+        config;
+
+    if (path.extname(file) === &#x27;.json&#x27;) {
+        // require() is Caches json files
+        config = JSON.parse(fileContent);
+    } else {
+        var mod = new Module(&#x27;.&#x27;, null);
+        mod.load(file);
+        config = mod.exports;
+    }
+
+    // Some extra variables
+    var data = {
+        __dirname: path.dirname(file),
+        __filename: file
+    };
+    for (var key in config) {
+        data[key] = config[key];
+    }
+
+    return interpolateConfigStrings(config, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.tryExtend" id="apidoc.element.lmd.lmd_common.tryExtend">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>tryExtend
+        <span class="apidocSignatureSpan">(config, configDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tryExtend = function (config, configDir) {
+    config = config || {};
+    if (typeof config.extends !== &#x22;string&#x22;) {
+        return config;
+    }
+
+    var parentConfig = tryExtend(readConfig(configDir, config.extends), configDir);
+
+    return deepDestructableMerge(parentConfig, config);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.lmd_common.wrapModule" id="apidoc.element.lmd.lmd_common.wrapModule">
+        function <span class="apidocSignatureSpan">lmd.lmd_common.</span>wrapModule
+        <span class="apidocSignatureSpan">(code, moduleOptions, moduleType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wrapModule = function (code, moduleOptions, moduleType) {
+    switch (moduleType) {
+        case &#x22;3-party&#x22;:
+            // create lmd module from non-lmd module
+            code = wrap3partyModule(code, moduleOptions);
+            break;
+
+        case &#x22;plain&#x22;:
+            // wrap plain module
+            code = wrapPlainModule(code);
+            break;
+
+        case &#x22;amd&#x22;:
+            // AMD RequireJS
+            code = wrapAmdModule(code);
+            break;
+
+        case &#x22;fd&#x22;:
+        case &#x22;fe&#x22;:
+            // wipe tail ;
+            code = removeTailSemicolons(code);
+    }
+
+    return code;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.super_" id="apidoc.module.lmd.super_">module lmd.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_" id="apidoc.element.lmd.super_.super_">
+        function <span class="apidocSignatureSpan">lmd.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Duplex(options) {
+  if (!(this instanceof Duplex))
+    return new Duplex(options);
+
+  Readable.call(this, options);
+  Writable.call(this, options);
+
+  if (options &#x26;&#x26; options.readable === false)
+    this.readable = false;
+
+  if (options &#x26;&#x26; options.writable === false)
+    this.writable = false;
+
+  this.allowHalfOpen = true;
+  if (options &#x26;&#x26; options.allowHalfOpen === false)
+    this.allowHalfOpen = false;
+
+  this.once(&#x27;end&#x27;, onend);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.super_.prototype" id="apidoc.module.lmd.super_.prototype">module lmd.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.prototype._push" id="apidoc.element.lmd.super_.prototype._push">
+        function <span class="apidocSignatureSpan">lmd.super_.prototype.</span>_push
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_push = function () {
+    // ALL written &#x26; flushed
+    if (this._finished &#x26;&#x26; this._buffer.length === 0) {
+        this.push(null);
+        return;
+    }
+
+    // Nothing to read or ca not write
+    if (!this._receiverCapacity || !this._buffer.length) {
+        return;
+    }
+
+    var chunkSize = this._receiverCapacity &#x3e; this._buffer.length ? this._buffer.length : this._receiverCapacity;
+    var chunk = this._buffer.slice(0, chunkSize);
+    this._receiverCapacity -= chunk.length;
+
+    this._buffer = this._buffer.slice(chunk.length);
+    this.push(chunk);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.prototype._read" id="apidoc.element.lmd.super_.prototype._read">
+        function <span class="apidocSignatureSpan">lmd.super_.prototype.</span>_read
+        <span class="apidocSignatureSpan">(size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_read = function (size) {
+    this._receiverCapacity += size;
+    this._push();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.prototype._write" id="apidoc.element.lmd.super_.prototype._write">
+        function <span class="apidocSignatureSpan">lmd.super_.prototype.</span>_write
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, callback) {
+    this._buffer = Buffer.concat([this._buffer, new Buffer(chunk, encoding)]);
+    this._push();
+    callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.prototype.end" id="apidoc.element.lmd.super_.prototype.end">
+        function <span class="apidocSignatureSpan">lmd.super_.prototype.</span>end
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function () {
+    Duplex.prototype.end.apply(this, arguments);
+    this._finished = true;
+    this._push();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.super_.super_" id="apidoc.module.lmd.super_.super_">module lmd.super_.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_" id="apidoc.element.lmd.super_.super_.super_">
+        function <span class="apidocSignatureSpan">lmd.super_.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Readable(options) {
+  if (!(this instanceof Readable))
+    return new Readable(options);
+
+  this._readableState = new ReadableState(options, this);
+
+  // legacy
+  this.readable = true;
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.super_.super_.prototype" id="apidoc.module.lmd.super_.super_.prototype">module lmd.super_.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.prototype._write" id="apidoc.element.lmd.super_.super_.prototype._write">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.prototype.</span>_write
+        <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, cb) {
+  cb(new Error(&#x27;not implemented&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.prototype.end" id="apidoc.element.lmd.super_.super_.prototype.end">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.prototype.</span>end
+        <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (chunk, encoding, cb) {
+  var state = this._writableState;
+
+  if (typeof chunk === &#x27;function&#x27;) {
+    cb = chunk;
+    chunk = null;
+    encoding = null;
+  } else if (typeof encoding === &#x27;function&#x27;) {
+    cb = encoding;
+    encoding = null;
+  }
+
+  if (typeof chunk !== &#x27;undefined&#x27; &#x26;&#x26; chunk !== null)
+    this.write(chunk, encoding);
+
+  // ignore unnecessary end() calls.
+  if (!state.ending &#x26;&#x26; !state.finished)
+    endWritable(this, state, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.prototype.write" id="apidoc.element.lmd.super_.super_.prototype.write">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.prototype.</span>write
+        <span class="apidocSignatureSpan">(chunk, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (chunk, encoding, cb) {
+  var state = this._writableState;
+  var ret = false;
+
+  if (typeof encoding === &#x27;function&#x27;) {
+    cb = encoding;
+    encoding = null;
+  }
+
+  if (Buffer.isBuffer(chunk))
+    encoding = &#x27;buffer&#x27;;
+  else if (!encoding)
+    encoding = state.defaultEncoding;
+
+  if (typeof cb !== &#x27;function&#x27;)
+    cb = function() {};
+
+  if (state.ended)
+    writeAfterEnd(this, state, cb);
+  else if (validChunk(this, state, chunk, cb))
+    ret = writeOrBuffer(this, state, chunk, encoding, cb);
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.super_.super_.super_.prototype" id="apidoc.module.lmd.super_.super_.super_.prototype">module lmd.super_.super_.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype._read" id="apidoc.element.lmd.super_.super_.super_.prototype._read">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>_read
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_read = function (n) {
+  this.emit(&#x27;error&#x27;, new Error(&#x27;not implemented&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.addListener" id="apidoc.element.lmd.super_.super_.super_.prototype.addListener">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>addListener
+        <span class="apidocSignatureSpan">(ev, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addListener = function (ev, fn) {
+  var res = Stream.prototype.on.call(this, ev, fn);
+
+  if (ev === &#x27;data&#x27; &#x26;&#x26; !this._readableState.flowing)
+    emitDataEvents(this);
+
+  if (ev === &#x27;readable&#x27; &#x26;&#x26; this.readable) {
+    var state = this._readableState;
+    if (!state.readableListening) {
+      state.readableListening = true;
+      state.emittedReadable = false;
+      state.needReadable = true;
+      if (!state.reading) {
+        this.read(0);
+      } else if (state.length) {
+        emitReadable(this, state);
+      }
+    }
+  }
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.on" id="apidoc.element.lmd.super_.super_.super_.prototype.on">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>on
+        <span class="apidocSignatureSpan">(ev, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (ev, fn) {
+  var res = Stream.prototype.on.call(this, ev, fn);
+
+  if (ev === &#x27;data&#x27; &#x26;&#x26; !this._readableState.flowing)
+    emitDataEvents(this);
+
+  if (ev === &#x27;readable&#x27; &#x26;&#x26; this.readable) {
+    var state = this._readableState;
+    if (!state.readableListening) {
+      state.readableListening = true;
+      state.emittedReadable = false;
+      state.needReadable = true;
+      if (!state.reading) {
+        this.read(0);
+      } else if (state.length) {
+        emitReadable(this, state);
+      }
+    }
+  }
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.pause" id="apidoc.element.lmd.super_.super_.super_.prototype.pause">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pause = function () {
+  emitDataEvents(this, true);
+  this.emit(&#x27;pause&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.pipe" id="apidoc.element.lmd.super_.super_.super_.prototype.pipe">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>pipe
+        <span class="apidocSignatureSpan">(dest, pipeOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipe = function (dest, pipeOpts) {
+  var src = this;
+  var state = this._readableState;
+
+  switch (state.pipesCount) {
+    case 0:
+      state.pipes = dest;
+      break;
+    case 1:
+      state.pipes = [state.pipes, dest];
+      break;
+    default:
+      state.pipes.push(dest);
+      break;
+  }
+  state.pipesCount += 1;
+
+  var doEnd = (!pipeOpts || pipeOpts.end !== false) &#x26;&#x26;
+              dest !== process.stdout &#x26;&#x26;
+              dest !== process.stderr;
+
+  var endFn = doEnd ? onend : cleanup;
+  if (state.endEmitted)
+    process.nextTick(endFn);
+  else
+    src.once(&#x27;end&#x27;, endFn);
+
+  dest.on(&#x27;unpipe&#x27;, onunpipe);
+  function onunpipe(readable) {
+    if (readable !== src) return;
+    cleanup();
+  }
+
+  function onend() {
+    dest.end();
+  }
+
+  // when the dest drains, it reduces the awaitDrain counter
+  // on the source.  This would be more elegant with a .once()
+  // handler in flow(), but adding and removing repeatedly is
+  // too slow.
+  var ondrain = pipeOnDrain(src);
+  dest.on(&#x27;drain&#x27;, ondrain);
+
+  function cleanup() {
+    // cleanup event handlers once the pipe is broken
+    dest.removeListener(&#x27;close&#x27;, onclose);
+    dest.removeListener(&#x27;finish&#x27;, onfinish);
+    dest.removeListener(&#x27;drain&#x27;, ondrain);
+    dest.removeListener(&#x27;error&#x27;, onerror);
+    dest.removeListener(&#x27;unpipe&#x27;, onunpipe);
+    src.removeListener(&#x27;end&#x27;, onend);
+    src.removeListener(&#x27;end&#x27;, cleanup);
+
+    // if the reader is waiting for a drain event from this
+    // specific writer, then it would cause it to never start
+    // flowing again.
+    // So, if this is awaiting a drain, then we just call it now.
+    // If we don&#x27;t know, then assume that we are waiting for one.
+    if (!dest._writableState || dest._writableState.needDrain)
+      ondrain();
+  }
+
+  // if the dest has an error, then stop piping into it.
+  // however, don&#x27;t suppress the throwing behavior for this.
+  function onerror(er) {
+    unpipe();
+    dest.removeListener(&#x27;error&#x27;, onerror);
+    if (EE.listenerCount(dest, &#x27;error&#x27;) === 0)
+      dest.emit(&#x27;error&#x27;, er);
+  }
+  // This is a brutally ugly hack to make sure that our error handler
+  // is attached before any userland ones.  NEVER DO THIS.
+  if (!dest._events || !dest._events.error)
+    dest.on(&#x27;error&#x27;, onerror);
+  else if (isArray(dest._events.error))
+    dest._events.error.unshift(onerror);
+  else
+    dest._events.error = [onerror, dest._events.error];
+
+
+
+  // Both close and finish should trigger unpipe, but only once.
+  function onclose() {
+    dest.removeListener(&#x27;finish&#x27;, onfinish);
+    unpipe();
+  }
+  dest.once(&#x27;close&#x27;, onclose);
+  function onfinish() {
+    dest.removeListener(&#x27;close&#x27;, onclose);
+    unpipe();
+  }
+  dest.once(&#x27;finish&#x27;, onfinish);
+
+  function unpipe() {
+    src.unpipe(dest);
+  }
+
+  // tell the dest that it&#x27;s being piped to
+  dest.emit(&#x27;pipe&#x27;, src);
+
+  // start the flow if it hasn&#x27;t been started already.
+  if (!state.flowing) {
+    // the handler that waits for readable events after all
+    // the data gets sucked out in flow.
+    // This would be easier to follow with a .once() handler
+    // in flow(), but that is too slow.
+    this.on(&#x27;readable&#x27;, pipeOnReadable);
+
+    state.flowing = true;
+    process.nextTick(function() {
+      flow(src);
+    });
+  }
+
+  return dest;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.push" id="apidoc.element.lmd.super_.super_.super_.prototype.push">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>push
+        <span class="apidocSignatureSpan">(chunk, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">push = function (chunk, encoding) {
+  var state = this._readableState;
+
+  if (typeof chunk === &#x27;string&#x27; &#x26;&#x26; !state.objectMode) {
+    encoding = encoding || state.defaultEncoding;
+    if (encoding !== state.encoding) {
+      chunk = new Buffer(chunk, encoding);
+      encoding = &#x27;&#x27;;
+    }
+  }
+
+  return readableAddChunk(this, state, chunk, encoding, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var isFirstFunction = true,
+        isFirstLine = true;
+
+	/**
+	 * A statement was found in the file, remember its id.
+	 */
+	function rememberStatement (id) {
+		lines.<span class="apidocCodeKeywordSpan">push</span>(id);
+	};
+
+	/**
+	 * A function was found in the file, remember its id.
+	 */
+	function rememberFunction (id) {
+		allFunctions.push(id);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.read" id="apidoc.element.lmd.super_.super_.super_.prototype.read">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>read
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (n) {
+  var state = this._readableState;
+  state.calledRead = true;
+  var nOrig = n;
+  var ret;
+
+  if (typeof n !== &#x27;number&#x27; || n &#x3e; 0)
+    state.emittedReadable = false;
+
+  // if we&#x27;re doing read(0) to trigger a readable event, but we
+  // already have a bunch of data in the buffer, then just trigger
+  // the &#x27;readable&#x27; event and move on.
+  if (n === 0 &#x26;&#x26;
+      state.needReadable &#x26;&#x26;
+      (state.length &#x3e;= state.highWaterMark || state.ended)) {
+    emitReadable(this);
+    return null;
+  }
+
+  n = howMuchToRead(n, state);
+
+  // if we&#x27;ve ended, and we&#x27;re now clear, then finish it up.
+  if (n === 0 &#x26;&#x26; state.ended) {
+    ret = null;
+
+    // In cases where the decoder did not receive enough data
+    // to produce a full chunk, then immediately received an
+    // EOF, state.buffer will contain [&#x3c;Buffer &#x3e;, &#x3c;Buffer 00 ...&#x3e;].
+    // howMuchToRead will see this and coerce the amount to
+    // read to zero (because it&#x27;s looking at the length of the
+    // first &#x3c;Buffer &#x3e; in state.buffer), and we&#x27;ll end up here.
+    //
+    // This can only happen via state.decoder -- no other venue
+    // exists for pushing a zero-length chunk into state.buffer
+    // and triggering this behavior. In this case, we return our
+    // remaining data and end the stream, if appropriate.
+    if (state.length &#x3e; 0 &#x26;&#x26; state.decoder) {
+      ret = fromList(n, state);
+      state.length -= ret.length;
+    }
+
+    if (state.length === 0)
+      endReadable(this);
+
+    return ret;
+  }
+
+  // All the actual chunk generation logic needs to be
+  // *below* the call to _read.  The reason is that in certain
+  // synthetic stream cases, such as passthrough streams, _read
+  // may be a completely synchronous operation which may change
+  // the state of the read buffer, providing enough data when
+  // before there was *not* enough.
+  //
+  // So, the steps are:
+  // 1. Figure out what the state of things will be after we do
+  // a read from the buffer.
+  //
+  // 2. If that resulting state will trigger a _read, then call _read.
+  // Note that this may be asynchronous, or synchronous.  Yes, it is
+  // deeply ugly to write APIs this way, but that still doesn&#x27;t mean
+  // that the Readable class should behave improperly, as streams are
+  // designed to be sync/async agnostic.
+  // Take note if the _read call is sync or async (ie, if the read call
+  // has returned yet), so that we know whether or not it&#x27;s safe to emit
+  // &#x27;readable&#x27; etc.
+  //
+  // 3. Actually pull the requested chunks out of the buffer and return.
+
+  // if we need a readable event, then we need to do some reading.
+  var doRead = state.needReadable;
+
+  // if we currently have less than the highWaterMark, then also read some
+  if (state.length - n &#x3c;= state.highWaterMark)
+    doRead = true;
+
+  // however, if we&#x27;ve ended, then there&#x27;s no point, and if we&#x27;re already
+  // reading, then it&#x27;s unnecessary.
+  if (state.ended || state.reading)
+    doRead = false;
+
+  if (doRead) {
+    state.reading = true;
+    state.sync = true;
+    // if the length is currently zero, then we *need* a readable event.
+    if (state.length === 0)
+      state.needReadable = true;
+    // call internal read method
+    this._read(state.highWaterMark);
+    state.sync = false;
+  }
+
+  // If _read called its callback synchronously, then `reading`
+  // will be false, and we need to re-evaluate how much data we
+  // can return to the user.
+  if (doRead &#x26;&#x26; !state.reading)
+    n = howMuchToRead(nOrig, state);
+
+  if (n &#x3e; 0)
+    ret = fromList(n, state);
+  else
+    ret = null;
+
+  if (ret === null) {
+    state.needReadable = true;
+    n = 0;
+  }
+
+  state.length -= n;
+
+  // If we have nothing in the buffer, then we want to know
+  // as soon as we *do* get something into the buffer.
+  if (state.length === 0 &#x26;&#x26; !state.ended)
+    state.needReadable = true;
+
+  // If we happened to read() exactly the remaining amount in the
+  // buffer, and the EOF has been seen at this point, then make sure
+  // that we emit &#x27;end&#x27; on the very next tick.
+  if (state.ended &#x26;&#x26; !state.endEmitted &#x26;&#x26; state.length === 0)
+    endReadable(this);
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.resume" id="apidoc.element.lmd.super_.super_.super_.prototype.resume">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>resume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resume = function () {
+  emitDataEvents(this);
+  this.read(0);
+  this.emit(&#x27;resume&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.setEncoding" id="apidoc.element.lmd.super_.super_.super_.prototype.setEncoding">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>setEncoding
+        <span class="apidocSignatureSpan">(enc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setEncoding = function (enc) {
+  if (!StringDecoder)
+    StringDecoder = require(&#x27;string_decoder/&#x27;).StringDecoder;
+  this._readableState.decoder = new StringDecoder(enc);
+  this._readableState.encoding = enc;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.unpipe" id="apidoc.element.lmd.super_.super_.super_.prototype.unpipe">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>unpipe
+        <span class="apidocSignatureSpan">(dest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unpipe = function (dest) {
+  var state = this._readableState;
+
+  // if we&#x27;re not piping anywhere, then do nothing.
+  if (state.pipesCount === 0)
+    return this;
+
+  // just one destination.  most common case.
+  if (state.pipesCount === 1) {
+    // passed in one, but it&#x27;s not the right one.
+    if (dest &#x26;&#x26; dest !== state.pipes)
+      return this;
+
+    if (!dest)
+      dest = state.pipes;
+
+    // got a match.
+    state.pipes = null;
+    state.pipesCount = 0;
+    this.removeListener(&#x27;readable&#x27;, pipeOnReadable);
+    state.flowing = false;
+    if (dest)
+      dest.emit(&#x27;unpipe&#x27;, this);
+    return this;
+  }
+
+  // slow case. multiple pipe destinations.
+
+  if (!dest) {
+    // remove all.
+    var dests = state.pipes;
+    var len = state.pipesCount;
+    state.pipes = null;
+    state.pipesCount = 0;
+    this.removeListener(&#x27;readable&#x27;, pipeOnReadable);
+    state.flowing = false;
+
+    for (var i = 0; i &#x3c; len; i++)
+      dests[i].emit(&#x27;unpipe&#x27;, this);
+    return this;
+  }
+
+  // try to find the right one.
+  var i = indexOf(state.pipes, dest);
+  if (i === -1)
+    return this;
+
+  state.pipes.splice(i, 1);
+  state.pipesCount -= 1;
+  if (state.pipesCount === 1)
+    state.pipes = state.pipes[0];
+
+  dest.emit(&#x27;unpipe&#x27;, this);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.unshift" id="apidoc.element.lmd.super_.super_.super_.prototype.unshift">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>unshift
+        <span class="apidocSignatureSpan">(chunk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unshift = function (chunk) {
+  var state = this._readableState;
+  return readableAddChunk(this, state, chunk, &#x27;&#x27;, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        for (var moduleName in modules) {
+if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignored) {
+    dependsMask = modules[moduleName].depends;
+    dependsConfigPath = getDependsConfigOf(modules[moduleName].path, dependsMask);
+    dependsConfigPath.forEach(function (dependsConfigPath) {
+        if (fileExists(dependsConfigPath)) {
+            if (!usedConfigs[dependsConfigPath]) {
+                configs.<span class="apidocCodeKeywordSpan">unshift</span>({
+                    context: &#x27;depends config **&#x27; + dependsConfigPath + &#x27;**&#x27;,
+                    config: assembleLmdConfig(dependsConfigPath, flagsNames, null, usedConfigs)
+                });
+            }
+        }
+    });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.super_.super_.super_.prototype.wrap" id="apidoc.element.lmd.super_.super_.super_.prototype.wrap">
+        function <span class="apidocSignatureSpan">lmd.super_.super_.super_.prototype.</span>wrap
+        <span class="apidocSignatureSpan">(stream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wrap = function (stream) {
+  var state = this._readableState;
+  var paused = false;
+
+  var self = this;
+  stream.on(&#x27;end&#x27;, function() {
+    if (state.decoder &#x26;&#x26; !state.ended) {
+      var chunk = state.decoder.end();
+      if (chunk &#x26;&#x26; chunk.length)
+        self.push(chunk);
+    }
+
+    self.push(null);
+  });
+
+  stream.on(&#x27;data&#x27;, function(chunk) {
+    if (state.decoder)
+      chunk = state.decoder.write(chunk);
+
+    // don&#x27;t skip over falsy values in objectMode
+    //if (state.objectMode &#x26;&#x26; util.isNullOrUndefined(chunk))
+    if (state.objectMode &#x26;&#x26; (chunk === null || chunk === undefined))
+      return;
+    else if (!state.objectMode &#x26;&#x26; (!chunk || !chunk.length))
+      return;
+
+    var ret = self.push(chunk);
+    if (!ret) {
+      paused = true;
+      stream.pause();
+    }
+  });
+
+  // proxy all the other methods.
+  // important when wrapping filters and duplexes.
+  for (var i in stream) {
+    if (typeof stream[i] === &#x27;function&#x27; &#x26;&#x26;
+        typeof this[i] === &#x27;undefined&#x27;) {
+      this[i] = function(method) { return function() {
+        return stream[method].apply(stream, arguments);
+      }}(i);
+    }
+  }
+
+  // proxy certain important events.
+  var events = [&#x27;error&#x27;, &#x27;close&#x27;, &#x27;destroy&#x27;, &#x27;pause&#x27;, &#x27;resume&#x27;];
+  forEach(events, function(ev) {
+    stream.on(ev, self.emit.bind(self, ev));
+  });
+
+  // when we try to consume some more bytes, simply unpause the
+  // underlying stream.
+  self._read = function(n) {
+    if (paused) {
+      paused = false;
+      stream.resume();
+    }
+  };
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.lmd.watch" id="apidoc.module.lmd.watch">module lmd.watch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.lmd.watch.watch" id="apidoc.element.lmd.watch.watch">
+        function <span class="apidocSignatureSpan">lmd.</span>watch
+        <span class="apidocSignatureSpan">(configFile, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">watch = function (configFile, options) {
+    DataStream.call(this);
+    this.options = options || {};
+    var self = this;
+
+    this.configFile = configFile;
+
+    this.init();
+    this.sourceMap.readable = false;
+    this.readable = false;
+
+    // Let return instance before build
+    this.watchConfig = this.compileConfig(self.configFile, self.options);
+
+    this.makeEmptyStreamsUnreadable(this.watchConfig);
+
+    var isFatalErrors = !this.isAllModulesExists(this.watchConfig);
+    if (isFatalErrors) {
+        this.readable = false;
+    }
+    process.nextTick(function () {
+        if (!isFatalErrors) {
+            if (!configFile) {
+                return;
+            }
+
+            if (typeof self.watchConfig.output === &#x27;string&#x27;) {
+                self.fsWatch(self.watchConfig);
+                return;
+            } else {
+                self.log.write(&#x27;ERRO&#x27;.red.inverse + &#x27;:&#x27; + &#x27;    Check your config file. &#x22;output&#x22; parameter should be a {String} eg
+ &#x22;../path&#x22;&#x27;.red + &#x27;\n&#x27;);
+                return;
+            }
+        } else {
+            self.printFatalErrors(self.watchConfig);
+        }
+        self.closeStreams();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
