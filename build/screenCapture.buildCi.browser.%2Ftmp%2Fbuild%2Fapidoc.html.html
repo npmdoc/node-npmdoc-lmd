@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://lmdjs.org/"
-
-    >lmd (v1.13.4)</a>
+    <a href="http://lmdjs.org/">lmd (v1.13.4)</a>
 </h1>
 <h4>LMD: Lazy Module Declaration</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.lmd">module lmd</a><ol>
 
@@ -1304,7 +1297,7 @@
                 self.sourceMap.write(buildResult.sourceMap.toString());
                 self._streamBundles(buildResult.bundles);
             } else {
-                self.log.write(&#x27;lmd usage:\n\t    &#x27; + &#x27;lmd&#x27;.blue + &#x27; &#x27; + &#x27;config.lmd.js(on)&#x27;.green + &#x27; [output.lmd.js]\n&#x27;);
+                self.log.write('lmd usage:\n\t    ' + 'lmd'.blue + ' ' + 'config.lmd.js(on)'.green + ' [output.lmd.js]\n');
             }
         } else {
             self.printFatalErrors(self.buildConfig);
@@ -1349,17 +1342,17 @@
   Readable.call(this, options);
   Writable.call(this, options);
 
-  if (options &#x26;&#x26; options.readable === false)
+  if (options &amp;&amp; options.readable === false)
     this.readable = false;
 
-  if (options &#x26;&#x26; options.writable === false)
+  if (options &amp;&amp; options.writable === false)
     this.writable = false;
 
   this.allowHalfOpen = true;
-  if (options &#x26;&#x26; options.allowHalfOpen === false)
+  if (options &amp;&amp; options.allowHalfOpen === false)
     this.allowHalfOpen = false;
 
-  this.once(&#x27;end&#x27;, onend);
+  this.once('end', onend);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1399,12 +1392,12 @@
                 return;
             }
 
-            if (typeof self.watchConfig.output === &#x27;string&#x27;) {
+            if (typeof self.watchConfig.output === 'string') {
                 self.fsWatch(self.watchConfig);
                 return;
             } else {
-                self.log.write(&#x27;ERRO&#x27;.red.inverse + &#x27;:&#x27; + &#x27;    Check your config file. &#x22;output&#x22; parameter should be a {String} eg
- &#x22;../path&#x22;&#x27;.red + &#x27;\n&#x27;);
+                self.log.write('ERRO'.red.inverse + ':' + '    Check your config file. "output" parameter should be a {String} eg
+ "../path"'.red + '\n');
                 return;
             }
         } else {
@@ -1457,16 +1450,16 @@ cli.help(help, errorMessage);
 }
 
 function init(stdout, argv, cwd) {
-var options = require(&#x27;optimist&#x27;).parse(argv),
+var options = require('optimist').parse(argv),
     action = argv[2],
     logWriter = new cli.<span class="apidocCodeKeywordSpan">LogWriter</span>(stdout);
 
-if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
-    stdout.write(require(__dirname + &#x27;/../package.json&#x27;).version + &#x27;\n&#x27;);
+if (argv.length === 3 &amp;&amp; (options.v || options.version)) {
+    stdout.write(require(__dirname + '/../package.json').version + '\n');
 
 } else if (!actionsAliases.hasOwnProperty(action)) {
-    if (argv.length &#x3e;= 4) {
-        require(__dirname + &#x27;/lmd_actions/old.js&#x27;)(logWriter, argv.slice(2), cwd);
+    if (argv.length &gt;= 4) {
+        require(__dirname + '/lmd_actions/old.js')(logWriter, argv.slice(2), cwd);
 ...</pre></li>
     </ul>
 
@@ -1493,16 +1486,16 @@ cli.help(help, errorMessage);
 }
 
 function init(stdout, argv, cwd) {
-var options = require(&#x27;optimist&#x27;).parse(argv),
+var options = require('optimist').parse(argv),
     action = argv[2],
     logWriter = new cli.<span class="apidocCodeKeywordSpan">LogWriter</span>(stdout);
 
-if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
-    stdout.write(require(__dirname + &#x27;/../package.json&#x27;).version + &#x27;\n&#x27;);
+if (argv.length === 3 &amp;&amp; (options.v || options.version)) {
+    stdout.write(require(__dirname + '/../package.json').version + '\n');
 
 } else if (!actionsAliases.hasOwnProperty(action)) {
-    if (argv.length &#x3e;= 4) {
-        require(__dirname + &#x27;/lmd_actions/old.js&#x27;)(logWriter, argv.slice(2), cwd);
+    if (argv.length &gt;= 4) {
+        require(__dirname + '/lmd_actions/old.js')(logWriter, argv.slice(2), cwd);
 ...</pre></li>
     </ul>
 
@@ -1521,7 +1514,7 @@ if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">error = function (message) {
-    this.log(&#x27;ERRO&#x27;.red.inverse + &#x27;:    &#x27; + message);
+    this.log('ERRO'.red.inverse + ':    ' + message);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1537,27 +1530,27 @@ if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">help = function (content, errorMessage) {
     var help = [
-        &#x27;&#x27;,
-        &#x27;LMD Builder&#x27;,
-        &#x27;&#x27;
+        '',
+        'LMD Builder',
+        ''
     ];
 
     help = help.concat(content);
 
     if (errorMessage) {
-        help = help.concat([errorMessage.red, &#x27;&#x27;]);
+        help = help.concat([errorMessage.red, '']);
     }
 
     help = help.map(function (line) {
-        return &#x27;help&#x27;.cyan + &#x27;:    &#x27; + line;
-    }).join(&#x27;\n&#x27;);
+        return 'help'.cyan + ':    ' + line;
+    }).join('\n');
 
     this.log(help);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 var actions_help = Object.keys(allowedActions).reduce(function (result, action) {
-    return result.concat([allowedActions[action].cyan, &#x27;  lmd &#x27; + action, &#x27;&#x27;]);
+    return result.concat([allowedActions[action].cyan, '  lmd ' + action, '']);
 }, []);
 
 help = help.concat(actions_help);
@@ -1566,7 +1559,7 @@ cli.<span class="apidocCodeKeywordSpan">help</span>(help, errorMessage);
 }
 
 function init(stdout, argv, cwd) {
-var options = require(&#x27;optimist&#x27;).parse(argv),
+var options = require('optimist').parse(argv),
     action = argv[2],
     logWriter = new cli.LogWriter(stdout);
 ...</pre></li>
@@ -1582,7 +1575,7 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">log = function (message) {
-    this.stream.write(message + &#x27;\n&#x27;);
+    this.stream.write(message + '\n');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1597,7 +1590,7 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">ok = function (message) {
-    this.log(&#x27;info&#x27;.green + &#x27;:    &#x27; + message);
+    this.log('info'.green + ':    ' + message);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1612,7 +1605,7 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">warn = function (message) {
-    this.log(&#x27;warn&#x27;.yellow + &#x27;:    &#x27; + message);
+    this.log('warn'.yellow + ':    ' + message);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1656,7 +1649,7 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_isCanWriteStream = function (stream, fileName) {
-    return fileName &#x26;&#x26; stream &#x26;&#x26; stream.readable;
+    return fileName &amp;&amp; stream &amp;&amp; stream.readable;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1674,8 +1667,8 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     var cli = this.cli;
 
     if (this._isCanWriteStream(stream, fileName)) {
-        stream.once(&#x27;end&#x27;, function () {
-            cli.ok(&#x27;Writing &#x27; + resourceName + &#x27; to &#x27; + fileName.green);
+        stream.once('end', function () {
+            cli.ok('Writing ' + resourceName + ' to ' + fileName.green);
         });
     }
 }</pre></li>
@@ -1707,7 +1700,7 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
                 return;
             }
 
-            self._waitFor(stream, &#x27;end&#x27;);
+            self._waitFor(stream, 'end');
         });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1725,12 +1718,12 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     <li>description and source-code<pre class="apidocCodePre">_pipeStreamToFile = function (stream, fileName) {
     if (this._isCanWriteStream(stream, fileName)) {
         var writer = fs.createWriteStream(fileName, {
-            flags: &#x22;w&#x22;,
-            encoding: &#x22;utf8&#x22;,
+            flags: "w",
+            encoding: "utf8",
             mode: 0666
         });
 
-        this._waitFor(writer, &#x27;close&#x27;);
+        this._waitFor(writer, 'close');
 
         stream.pipe(writer);
     }
@@ -1749,8 +1742,8 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_resolvePaths = function (buildConfig) {
     var cwd = this.cwd,
-        configs = path.join(cwd, &#x27;.lmd&#x27;),
-        root = path.resolve(configs, buildConfig.root || &#x27;&#x27;),
+        configs = path.join(cwd, '.lmd'),
+        root = path.resolve(configs, buildConfig.root || ''),
         sourceMap = buildConfig.sourcemap ? path.resolve(root, buildConfig.sourcemap) : null,
         source = buildConfig.output ? path.resolve(root, buildConfig.output) : null,
         style = buildConfig.styles_output ? path.resolve(root, buildConfig.styles_output) : null;
@@ -1779,7 +1772,7 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     var self = this;
 
     this.pendingStreams--;
-    if (this.callback &#x26;&#x26; this.pendingStreams &#x3c;= 0) {
+    if (this.callback &amp;&amp; this.pendingStreams &lt;= 0) {
         // setImmediate
         setTimeout(function () {
             self.callback();
@@ -1823,13 +1816,13 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_writeStreamsTo = function (stream, paths, resourceName) {
-    this._logResult(stream, paths.source, &#x27;LMD &#x27; + resourceName);
+    this._logResult(stream, paths.source, 'LMD ' + resourceName);
     this._pipeStreamToFile(stream, paths.source);
 
-    this._logResult(stream.sourceMap, paths.sourceMap, &#x27;Source Map of &#x27; + resourceName);
+    this._logResult(stream.sourceMap, paths.sourceMap, 'Source Map of ' + resourceName);
     this._pipeStreamToFile(stream.sourceMap, paths.sourceMap);
 
-    this._logResult(stream.style, paths.style, &#x27;Style of &#x27; + resourceName);
+    this._logResult(stream.style, paths.style, 'Style of ' + resourceName);
     this._pipeStreamToFile(stream.style, paths.style);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1846,7 +1839,7 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     <ul>
     <li>description and source-code<pre class="apidocCodePre">logTo = function (cli) {
     if (!(cli instanceof LogWriter)) {
-        throw new TypeError(&#x27;cli should be instance of LogWriter&#x27;);
+        throw new TypeError('cli should be instance of LogWriter');
     }
 
     this.cli = cli;
@@ -1889,17 +1882,17 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
 
         buildConfig = this.source.buildConfig,
         configFile = this.source.configFile,
-        buildName = path.basename(configFile).split(&#x27;.lmd&#x27;)[0],
+        buildName = path.basename(configFile).split('.lmd')[0],
 
         paths = this._resolvePaths(buildConfig),
 
         isPrintToStdout = paths.source === null,
-        isCanLog = buildConfig.log &#x26;&#x26; !isPrintToStdout;
+        isCanLog = buildConfig.log &amp;&amp; !isPrintToStdout;
 
     // fatal error
-    if (source.readable === false &#x26;&#x26; isCanLog) {
+    if (source.readable === false &amp;&amp; isCanLog) {
         source.log.pipe(cli.stream);
-        callback(&#x27;fatal&#x27;);
+        callback('fatal');
         return;
     }
 
@@ -1912,17 +1905,17 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     this._onAllEnd(callback);
 
     if (isCanLog) {
-        var versionString = buildConfig.version ? &#x27; - version &#x27; + buildConfig.version.toString().cyan : &#x27;&#x27;;
-        cli.ok(&#x27;Building `&#x27; + buildName.green +  &#x27;` (&#x27; + (&#x27;.lmd/&#x27; + buildName + &#x27;.lmd.js(on)&#x27;).green + &#x27;)&#x27; + versionString);
-        if (buildConfig.mixins &#x26;&#x26; buildConfig.mixins.length) {
-            cli.ok(&#x27;Extra mixins &#x27; + buildConfig.mixins.map(function (mixinName) {
+        var versionString = buildConfig.version ? ' - version ' + buildConfig.version.toString().cyan : '';
+        cli.ok('Building `' + buildName.green +  '` (' + ('.lmd/' + buildName + '.lmd.js(on)').green + ')' + versionString);
+        if (buildConfig.mixins &amp;&amp; buildConfig.mixins.length) {
+            cli.ok('Extra mixins ' + buildConfig.mixins.map(function (mixinName) {
                 return mixinName.green
-            }).join(&#x27;, &#x27;));
+            }).join(', '));
         }
     }
 
     // Print package
-    this._writeStreamsTo(source, paths, &#x27;Package&#x27;);
+    this._writeStreamsTo(source, paths, 'Package');
 
     // Print bundles
     var bundles = buildConfig.bundles;
@@ -1930,7 +1923,7 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
         var stream = source.bundles[bundleName],
             paths = self._resolvePaths(bundles[bundleName]);
 
-        self._writeStreamsTo(stream, paths, &#x27;Bundle &#x27; + bundleName.green);
+        self._writeStreamsTo(stream, paths, 'Bundle ' + bundleName.green);
     });
 
     // Print warnings log
@@ -1956,22 +1949,22 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function init(stdout, argv, cwd) {
-    var options = require(&#x27;optimist&#x27;).parse(argv),
+    var options = require('optimist').parse(argv),
         action = argv[2],
         logWriter = new cli.LogWriter(stdout);
 
-    if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
-        stdout.write(require(__dirname + &#x27;/../package.json&#x27;).version + &#x27;\n&#x27;);
+    if (argv.length === 3 &amp;&amp; (options.v || options.version)) {
+        stdout.write(require(__dirname + '/../package.json').version + '\n');
 
     } else if (!actionsAliases.hasOwnProperty(action)) {
-        if (argv.length &#x3e;= 4) {
-            require(__dirname + &#x27;/lmd_actions/old.js&#x27;)(logWriter, argv.slice(2), cwd);
+        if (argv.length &gt;= 4) {
+            require(__dirname + '/lmd_actions/old.js')(logWriter, argv.slice(2), cwd);
         } else {
             printHelp(logWriter);
         }
 
     } else {
-        require(__dirname + &#x27;/lmd_actions/&#x27; + actionsAliases[action] + &#x27;.js&#x27;)(logWriter, argv.slice(2), cwd);
+        require(__dirname + '/lmd_actions/' + actionsAliases[action] + '.js')(logWriter, argv.slice(2), cwd);
 
     }
 }</pre></li>
@@ -2028,7 +2021,7 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
                 self.sourceMap.write(buildResult.sourceMap.toString());
                 self._streamBundles(buildResult.bundles);
             } else {
-                self.log.write(&#x27;lmd usage:\n\t    &#x27; + &#x27;lmd&#x27;.blue + &#x27; &#x27; + &#x27;config.lmd.js(on)&#x27;.green + &#x27; [output.lmd.js]\n&#x27;);
+                self.log.write('lmd usage:\n\t    ' + 'lmd'.blue + ' ' + 'config.lmd.js(on)'.green + ' [output.lmd.js]\n');
             }
         } else {
             self.printFatalErrors(self.buildConfig);
@@ -2111,12 +2104,12 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
                 return;
             }
 
-            if (typeof self.watchConfig.output === &#x27;string&#x27;) {
+            if (typeof self.watchConfig.output === 'string') {
                 self.fsWatch(self.watchConfig);
                 return;
             } else {
-                self.log.write(&#x27;ERRO&#x27;.red.inverse + &#x27;:&#x27; + &#x27;    Check your config file. &#x22;output&#x22; parameter should be a {String} eg
- &#x22;../path&#x22;&#x27;.red + &#x27;\n&#x27;);
+                self.log.write('ERRO'.red.inverse + ':' + '    Check your config file. "output" parameter should be a {String} eg
+ "../path"'.red + '\n');
                 return;
             }
         } else {
@@ -2146,7 +2139,7 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     <ul>
     <li>description and source-code<pre class="apidocCodePre">analiseModuleContent = function (moduleOptions) {
     var moduleDescriptor = {
-            type: &#x22;&#x22;,
+            type: "",
             warns: [],
             code: null,
             originalCode: null,
@@ -2155,14 +2148,14 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
         };
 
     if (moduleOptions.is_shortcut) {
-        moduleDescriptor.type = &#x22;shortcut&#x22;;
+        moduleDescriptor.type = "shortcut";
         moduleDescriptor.features.shortcuts = true;
 
         return moduleDescriptor;
     }
 
     if (!moduleOptions.is_exists) {
-        moduleDescriptor.type = &#x22;not-exists&#x22;;
+        moduleDescriptor.type = "not-exists";
 
         return moduleDescriptor;
     }
@@ -2170,8 +2163,8 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     var modulePath = [].concat(moduleOptions.path);
 
     var code = modulePath.map(function (modulePath) {
-        return fs.readFileSync(modulePath, &#x27;utf8&#x27;);
-    }).join(&#x27;\n/* joined by builder */\n&#x27;);
+        return fs.readFileSync(modulePath, 'utf8');
+    }).join('\n/* joined by builder */\n');
 
     var ast;
 
@@ -2180,31 +2173,31 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
 
     try {
         JSON.parse(code);
-        moduleDescriptor.type = &#x22;json&#x22;;
+        moduleDescriptor.type = "json";
         return moduleDescriptor;
     } catch (e) {}
 
     try {
         ast = parser.parse(code);
     } catch (e) {
-        moduleDescriptor.type = &#x22;string&#x22;;
+        moduleDescriptor.type = "string";
 
         var isOneOfModulesIsJs = modulePath.some(function (modulePath) {
             return /.js$/.test(modulePath);
         });
 
         if (isOneOfModulesIsJs) {
-            moduleDescriptor.type = &#x22;string&#x22;;
+            moduleDescriptor.type = "string";
             moduleDescriptor.warns
-                .push(&#x27;File &#x22;**&#x27; + modulePath.join(&#x27;**&#x22;, &#x22;**&#x27;) + &#x27;**&#x22; has extension **.js** and LMD detect an parse error. \n&#x27; +
+                .push('File "**' + modulePath.join('**", "**') + '**" has extension **.js** and LMD detect an parse error. \n' +
                     e.toString().red +
-                    &#x27;\nThis module will be string. Please check the source.&#x27;);
+                    '\nThis module will be string. Please check the source.');
         }
         return moduleDescriptor;
     }
 
     if (moduleOptions.is_third_party) {
-        moduleDescriptor.type = &#x22;3-party&#x22;;
+        moduleDescriptor.type = "3-party";
     } else {
         moduleDescriptor.type = getModuleType(ast);
     }
@@ -2214,9 +2207,9 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
         // Unexpected module type
         if (!MODULE_TYPE_HINTS.hasOwnProperty(moduleOptions.type_hint)) {
             moduleDescriptor.warns
-                .push(&#x27;Unexpected module type hint `&#x27; + moduleOptions.type_hint + &#x27;` of module &#x22;&#x27; + String(moduleOptions.name).green
- + &#x27;&#x22;. &#x27; +
-                    &#x27;Only these types are supported: &#x27; + Object.keys(MODULE_TYPE_HINTS).join(&#x27;, &#x27;));
+                .push('Unexpected module type hint `' + moduleOptions.type_hint + '` of module "' + String(moduleOptions.name).green
+ + '". ' +
+                    'Only these types are supported: ' + Object.keys(MODULE_TYPE_HINTS).join(', '));
         } else {
             // Good type hint
             moduleDescriptor.type = moduleOptions.type_hint;
@@ -2225,16 +2218,16 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
 
     moduleDescriptor.code = wrapModule(moduleDescriptor.code, moduleOptions, moduleDescriptor.type);
 
-    if (moduleDescriptor.type === &#x27;3-party&#x27;) {
+    if (moduleDescriptor.type === '3-party') {
         var extraRequires = []
             .concat(collect3partyDepends(moduleOptions.extra_bind))
             .concat(collect3partyDepends(moduleOptions.extra_require));
 
-        if (extraRequires.length &#x26;&#x26; moduleOptions.is_sandbox) {
+        if (extraRequires.length &amp;&amp; moduleOptions.is_sandbox) {
             moduleDescriptor.warns
-                .push(&#x27;Your module &#x22;**&#x27; + modulePath.join(&#x27;**&#x22;, &#x22;**&#x27;) + &#x27;**&#x22; have to require() some dependencies, but it is sandboxed
-. &#x27; +
-                &#x27;Remove sandbox flag to allow module require().&#x27;);
+                .push('Your module "**' + modulePath.join('**", "**') + '**" have to require() some dependencies, but it is sandboxed
+. ' +
+                'Remove sandbox flag to allow module require().');
         }
 
         Array.prototype.push.apply(moduleDescriptor.depends, extraRequires);
@@ -2247,10 +2240,10 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     moduleDescriptor.depends = moduleDescriptor.depends.concat(analyticsResult.depends);
 
     moduleDescriptor.depends = moduleDescriptor.depends.filter(function(item, index, array) {
-        return array.indexOf(item, index + 1) &#x3c; 0;
+        return array.indexOf(item, index + 1) &lt; 0;
     });
 
-    if (moduleDescriptor.type === &#x22;amd&#x22;) {
+    if (moduleDescriptor.type === "amd") {
         moduleDescriptor.features.amd = true;
         moduleDescriptor.depends = addExtraAmdDepends(ast, moduleDescriptor.depends);
     }
@@ -2294,8 +2287,8 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
         for (var dependsName in config.plugins_depends) {
             dependsOf = config.plugins_depends[dependsName];
 
-            result.push(&#x27;Extra plugin was added &#x27; + (&#x27;&#x22;&#x27; + dependsName + &#x27;&#x22;&#x27;).green + &#x27;: &#x27; + &#x27;true&#x27;.green + &#x27;. This is depends of
- &#x27; + dependsOf.join(&#x27;, &#x27;).cyan + &#x27;.&#x27;);
+            result.push('Extra plugin was added ' + ('"' + dependsName + '"').green + ': ' + 'true'.green + '. This is depends of
+ ' + dependsOf.join(', ').cyan + '.');
         }
     }
 
@@ -2321,15 +2314,15 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
 
     // aggregate usage
     iterateModulesInfo(deepModulesInfo, function (module, moduleName, bundleName) {
-        if (module.type === &#x22;amd&#x22;) {
+        if (module.type === "amd") {
             is_using_amd = true;
         }
-        if (module.type === &#x22;shortcut&#x22;) {
+        if (module.type === "shortcut") {
             is_using_shortcuts = true;
         }
         var features = module.features;
         for (var featureName in features) {
-            if (typeof config[featureName] === &#x22;undefined&#x22; || config[featureName] === false) {
+            if (typeof config[featureName] === "undefined" || config[featureName] === false) {
                 if (!featureWarnings[featureName]) {
                     featureWarnings[featureName] = [];
                 }
@@ -2343,70 +2336,70 @@ var options = require(&#x27;optimist&#x27;).parse(argv),
     });
 
     for (var featureName in featureWarnings) {
-        result.push(&#x22;Required &#x22; + (&#x22;\&#x22;&#x22; + featureName + &#x22;\&#x22;&#x22;).green + &#x22;: &#x22; + &#x22;true&#x22;.green +
-                    &#x22;. Some of your modules (&#x22; + (featureWarnings[featureName].join(&#x27;, &#x27;)).cyan + &#x22;) are uses feature &#x22; + (&#x22;`&#x22; +
-featureName + &#x22;`&#x22;).green + &#x22;, &#x22; +
-                    &#x22;but it disable in this build.&#x22;);
+        result.push("Required " + ("\"" + featureName + "\"").green + ": " + "true".green +
+                    ". Some of your modules (" + (featureWarnings[featureName].join(', ')).cyan + ") are uses feature " + ("`" +
+featureName + "`").green + ", " +
+                    "but it disable in this build.");
     }
 
-    if (!is_using_shortcuts &#x26;&#x26; config.shortcuts) {
-        result.push(&#x27;Config flag &#x27; + &#x27;`shortcuts`&#x27;.green + &#x27; is enabled, but there is no shortcuts in your package. &#x27; +
-                  &#x27;Disable that flag to optimize your package.&#x27;);
+    if (!is_using_shortcuts &amp;&amp; config.shortcuts) {
+        result.push('Config flag ' + '`shortcuts`'.green + ' is enabled, but there is no shortcuts in your package. ' +
+                  'Disable that flag to optimize your package.');
     }
 
-    if (!is_using_amd &#x26;&#x26; config.amd) {
-        result.push(&#x27;Config flag &#x27; + &#x27;`amd`&#x27;.green + &#x27; is enabled, but there is no AMD Modules in your package. &#x27; +
-                  &#x27;Disable that flag to optimize your package.&#x27;);
+    if (!is_using_amd &amp;&amp; config.amd) {
+        result.push('Config flag ' + '`amd`'.green + ' is enabled, but there is no AMD Modules in your package. ' +
+                  'Disable that flag to optimize your package.');
     }
 
-    if (config.stats_coverage &#x26;&#x26; (config.cache || config.cache_async)) {
-        result.push(&#x27;LMD will cache your modules under code coverage. You can disable &#x27; + &#x27;`cache`&#x27;.green + &#x27; and &#x27; + &#x27;`cache_async
-`&#x27;.green + &#x27; flags.&#x27;);
+    if (config.stats_coverage &amp;&amp; (config.cache || config.cache_async)) {
+        result.push('LMD will cache your modules under code coverage. You can disable ' + '`cache`'.green + ' and ' + '`cache_async
+`'.green + ' flags.');
     }
 
-    if (config.async_plain &#x26;&#x26; config.async_plainonly) {
-        result.push(&#x27;You are using both config flags &#x27; + &#x27;`async_plain`&#x27;.green + &#x27; and &#x27; + &#x27;`async_plainonly`&#x27;.green + &#x27;. Disable
- one to optimise your source.&#x27;);
+    if (config.async_plain &amp;&amp; config.async_plainonly) {
+        result.push('You are using both config flags ' + '`async_plain`'.green + ' and ' + '`async_plainonly`'.green + '. Disable
+ one to optimise your source.');
     }
 
-    if (!config.stats_coverage &#x26;&#x26; config.stats_coverage_async) {
-        result.push(&#x27;You are using &#x27; + &#x27;`stats_coverage_async`&#x27;.green + &#x27; without &#x27; + &#x27;`stats_coverage`&#x27;.green + &#x27;. Enable &#x27; + &#x27;`
-stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
+    if (!config.stats_coverage &amp;&amp; config.stats_coverage_async) {
+        result.push('You are using ' + '`stats_coverage_async`'.green + ' without ' + '`stats_coverage`'.green + '. Enable ' + '`
+stats_coverage`'.green + ' flag.');
     }
 
-    if (!config.async &#x26;&#x26; config.stats_coverage_async) {
-        result.push(&#x27;You are using &#x27; + &#x27;`stats_coverage_async`&#x27;.green + &#x27; but not using &#x27; + &#x27;`async`&#x27;.green + &#x27;. Disable &#x27; + &#x27;`stats_coverage_async
-`&#x27;.green + &#x27; flag.&#x27;);
+    if (!config.async &amp;&amp; config.stats_coverage_async) {
+        result.push('You are using ' + '`stats_coverage_async`'.green + ' but not using ' + '`async`'.green + '. Disable ' + '`stats_coverage_async
+`'.green + ' flag.');
     }
 
-    if (&#x27;promise&#x27; in config &#x26;&#x26; typeof config.promise !== &#x22;string&#x22;) {
-        result.push(&#x27;`promise`&#x27;.green + &#x27; should be a string pointing to the deferred factory function. eg &#x27; + &#x27;&#x22;promise&#x22;&#x27;.green
- + &#x27;: &#x27; + &#x27;&#x22;$.Deferred&#x22;&#x27;.green);
+    if ('promise' in config &amp;&amp; typeof config.promise !== "string") {
+        result.push('`promise`'.green + ' should be a string pointing to the deferred factory function. eg ' + '"promise"'.green
+ + ': ' + '"$.Deferred"'.green);
     }
 
-    if (&#x27;banner&#x27; in config) {
-        if (typeof config.banner !== &#x27;string&#x27;) {
-            result.push(&#x27;`banner`&#x27;.green + &#x27; should be a string&#x27;);
+    if ('banner' in config) {
+        if (typeof config.banner !== 'string') {
+            result.push('`banner`'.green + ' should be a string');
         } else {
             // Banner should not contain any javascript. Checking it.
             try {
                 var ast = parser.parse(config.banner);
                 if (ast[1].length !== 0) {
-                    result.push(&#x27;`banner`&#x27;.green + &#x27; should be a JavaScript comment. Please remove any executable JavaScript from
- &#x27; + &#x27;`banner`&#x27;.green + &#x27;.&#x27;);
+                    result.push('`banner`'.green + ' should be a JavaScript comment. Please remove any executable JavaScript from
+ ' + '`banner`'.green + '.');
                 }
             } catch (e) {
-                result.push(&#x27;Something is wrong with your &#x27; + &#x27;`banner`&#x27;.green + &#x27;, please check it&#x27;);
+                result.push('Something is wrong with your ' + '`banner`'.green + ', please check it');
             }
         }
     }
 
     var warnings = {
-        globals: &#x27;Some of your modules are undeclared (register them as &#x27; + &#x27;&#x22;name&#x22;&#x27;.green + &#x27;: &#x27; + &#x27;&#x22;@shortcut&#x22;&#x27;.green + &#x27; or use
- directly if they are globals):&#x27;,
-        modules: &#x27;Some of our modules are probably off-package (you can register them as &#x27; + &#x27;&#x22;name&#x22;&#x27;.green + &#x27;: &#x27; + &#x27;&#x22;@shortcut
-&#x22;&#x27;.green + &#x27;):&#x27;,
-        unused: &#x27;Some of your modu ...</pre></li>
+        globals: 'Some of your modules are undeclared (register them as ' + '"name"'.green + ': ' + '"@shortcut"'.green + ' or use
+ directly if they are globals):',
+        modules: 'Some of our modules are probably off-package (you can register them as ' + '"name"'.green + ': ' + '"@shortcut
+"'.green + '):',
+        unused: 'Some of your modu ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -2439,27 +2432,27 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
         isMultiPathModule,
         moduleData,
         isThirdPartyModule,
-        modulesDirPath = config.root || config.path || &#x27;&#x27;;
+        modulesDirPath = config.root || config.path || '';
 
     modulesDirPath = path.resolve(configDir, modulesDirPath);
 
     // grep paths
     for (moduleName in config.modules) {
         moduleDesciptor = config.modules[moduleName];
-        // case &#x22;moduleName&#x22;: null
-        // case &#x22;moduleName&#x22;: &#x22;path/to/module.js&#x22;
-        if (moduleDesciptor === null || typeof moduleDesciptor === &#x22;string&#x22; || Array.isArray(moduleDesciptor)) {
+        // case "moduleName": null
+        // case "moduleName": "path/to/module.js"
+        if (moduleDesciptor === null || typeof moduleDesciptor === "string" || Array.isArray(moduleDesciptor)) {
             moduleTypeHint = false;
             moduleExports = false;
             moduleRequire = false;
             moduleBind = false;
             modulePath = moduleDesciptor;
             moduleLazy = globalLazy;
-        } else { // case &#x22;moduleName&#x22;: {&#x22;path&#x22;: &#x22;path/to/module.js&#x22;, &#x22;lazy&#x22;: false}
+        } else { // case "moduleName": {"path": "path/to/module.js", "lazy": false}
             moduleTypeHint = moduleDesciptor.type || false;
             moduleExports = moduleDesciptor.exports || false;
             moduleRequire = moduleDesciptor.require || false;
-            moduleBind = moduleDesciptor.bind || moduleDesciptor[&#x27;this&#x27;] || false;
+            moduleBind = moduleDesciptor.bind || moduleDesciptor['this'] || false;
             modulePath = moduleDesciptor.path;
             moduleLazy = moduleDesciptor.lazy || false;
             moduleTypeHint = moduleDesciptor.type || false;
@@ -2468,7 +2461,7 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
         isMultiPathModule = false;
         if (Array.isArray(modulePath)) {
             // Try to glob
-            // case when [&#x27;jquery*.js&#x27;]
+            // case when ['jquery*.js']
             modulePath = modulePath.reduce(function (paths, modulePath) {
                 if (globPattern.test(modulePath)) {
                     modulePath = glob.sync(modulePath, {
@@ -2480,7 +2473,7 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
                 return paths.concat(modulePath);
             }, []);
 
-            // case when [&#x27;jquery.js&#x27;]
+            // case when ['jquery.js']
             if (modulePath.length === 1) {
                 modulePath = modulePath[0];
             } else {
@@ -2497,21 +2490,21 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
 
         // its a glob pattern
         // @see https://github.com/isaacs/node-glob
-        if (!isMultiPathModule &#x26;&#x26; globPattern.test(modulePath)) {
+        if (!isMultiPathModule &amp;&amp; globPattern.test(modulePath)) {
             var globModules = glob.sync(modulePath, {
                 cwd: modulesDirPath,
                 nosort: true
             });
 
-            // * -&#x3e; &#x3c;%= file =&#x3e; for backward capability
-            var moduleNameTemplate = template(moduleName.replace(&#x27;*&#x27;, &#x27;&#x3c;%= file %&#x3e;&#x27;));
+            // * -&gt; &lt;%= file =&gt; for backward capability
+            var moduleNameTemplate = template(moduleName.replace('*', '&lt;%= file %&gt;'));
 
             globModules.forEach(function (module) {
                 var moduleRealPath = path.join(modulesDirPath, module),
                     basename = path.basename(moduleRealPath),
-                    fileParts = basename.split(&#x27;.&#x27;),
+                    fileParts = basename.split('.'),
                     ext = fileParts.pop(),
-                    file = fileParts.join(&#x27;.&#x27;),
+                    file = fileParts.join('.'),
                     dir = path.dirname(moduleRealPath).split(path.sep).reverse(),
                     subdir = createSubdirTemplateVariable(modulesDirPath, moduleRealPath);
 
@@ -2569,7 +2562,7 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     <li>description and source-code<pre class="apidocCodePre">deepDestructableMerge = function (left, right) {
     for (var prop in right) {
         if (right.hasOwnProperty(prop))  {
-            if (typeof left[prop] === &#x22;object&#x22;) {
+            if (typeof left[prop] === "object") {
                 deepDestructableMerge(left[prop], right[prop]);
             } else {
                 left[prop] = right[prop];
@@ -2592,22 +2585,22 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function discoverModuleType(moduleName, modulesNames, globalsNames) {
     if (moduleName instanceof RegExp) {
-        return &#x27;regexp&#x27;;
+        return 'regexp';
     }
 
     if (modulesNames.indexOf(moduleName) != -1) {
-        return &#x27;in-package&#x27;;
+        return 'in-package';
     }
 
-    if (typeof globalsNames[moduleName] !== &#x22;undefined&#x22;) {
-        return &#x27;global&#x27;;
+    if (typeof globalsNames[moduleName] !== "undefined") {
+        return 'global';
     }
 
     if (/\.[a-z]{1,}$/.test(moduleName)) {
-        return &#x27;off-package?&#x27;;
+        return 'off-package?';
     }
 
-    return &#x27;global?&#x27;;
+    return 'global?';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2623,14 +2616,14 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function getGlobals(config) {
     var result = {},
-        names = [&#x27;GLOBALS&#x27;];
+        names = ['GLOBALS'];
 
     if (config.node) {
-        names.push(&#x27;NODE_GLOBALS&#x27;);
+        names.push('NODE_GLOBALS');
     }
 
     if (config.worker) {
-        names.push(&#x27;WORKER_GLOBALS&#x27;);
+        names.push('WORKER_GLOBALS');
     }
 
     names.forEach(function (name) {
@@ -2663,10 +2656,10 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
         return void 0;
     }
 
-    for (var i = 0, c = files.length, fileName; i &#x3c; c; i++) {
+    for (var i = 0, c = files.length, fileName; i &lt; c; i++) {
         fileName = files[i];
         var fileExtension = (fileName.match(reLmdFile) || 0)[0];
-        if (fileExtension &#x26;&#x26; path.basename(fileName, fileExtension) === shortName) {
+        if (fileExtension &amp;&amp; path.basename(fileName, fileExtension) === shortName) {
             return fileName;
         }
     }
@@ -2727,7 +2720,7 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
         if (!suspiciousNames.conflicts[name]) {
             suspiciousNames.conflicts[name] = [];
         }
-        // do not count main modules they can&#x27;t conflict
+        // do not count main modules they can't conflict
         if (!isMainModuleOf(name, bundleName)) {
             suspiciousNames.conflicts[name].push(bundleName);
         }
@@ -2737,22 +2730,22 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
             var moduleType = discoverModuleType(name, modulesNames, globalsNames);
 
             // Add this regexp list to use later
-            if (moduleType === &#x27;regexp&#x27;) {
+            if (moduleType === 'regexp') {
                 matchRegExpList.push(name);
                 return;
             }
 
             // skip special LMD names
-            if (typeof exports.LMD_GLOBALS[name] !== &#x22;undefined&#x22;) {
+            if (typeof exports.LMD_GLOBALS[name] !== "undefined") {
                 return;
             }
 
-            if (moduleType === &#x27;global?&#x27; &#x26;&#x26; !suspiciousNamesIndex.globals[name]) {
+            if (moduleType === 'global?' &amp;&amp; !suspiciousNamesIndex.globals[name]) {
                 suspiciousNamesIndex.globals[name] = true;
                 suspiciousNames.globals.push(name);
             }
 
-            if (moduleType === &#x27;off-package?&#x27; &#x26;&#x26; !suspiciousNamesIndex.modules[name]) {
+            if (moduleType === 'off-package?' &amp;&amp; !suspiciousNamesIndex.modules[name]) {
                 suspiciousNamesIndex.modules[name] = true;
                 suspiciousNames.modules.push(name);
             }
@@ -2782,7 +2775,7 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     // Cleanup module names without conflicts across bundles
     var conflicts = suspiciousNames.conflicts;
     suspiciousNames.conflicts = Object.keys(conflicts).reduce(function (result, moduleName) {
-        if (conflicts[moduleName].length &#x3e; 1) {
+        if (conflicts[moduleName].length &gt; 1) {
             result[moduleName] = conflicts[moduleName];
         }
 
@@ -2851,14 +2844,14 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     <li>description and source-code<pre class="apidocCodePre">readConfig = function (file) {
     file = path.join.apply(path, arguments);
 
-    var fileContent = fs.readFileSync(file, &#x27;utf8&#x27;),
+    var fileContent = fs.readFileSync(file, 'utf8'),
         config;
 
-    if (path.extname(file) === &#x27;.json&#x27;) {
+    if (path.extname(file) === '.json') {
         // require() is Caches json files
         config = JSON.parse(fileContent);
     } else {
-        var mod = new Module(&#x27;.&#x27;, null);
+        var mod = new Module('.', null);
         mod.load(file);
         config = mod.exports;
     }
@@ -2888,7 +2881,7 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">tryExtend = function (config, configDir) {
     config = config || {};
-    if (typeof config.extends !== &#x22;string&#x22;) {
+    if (typeof config.extends !== "string") {
         return config;
     }
 
@@ -2910,23 +2903,23 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">wrapModule = function (code, moduleOptions, moduleType) {
     switch (moduleType) {
-        case &#x22;3-party&#x22;:
+        case "3-party":
             // create lmd module from non-lmd module
             code = wrap3partyModule(code, moduleOptions);
             break;
 
-        case &#x22;plain&#x22;:
+        case "plain":
             // wrap plain module
             code = wrapPlainModule(code);
             break;
 
-        case &#x22;amd&#x22;:
+        case "amd":
             // AMD RequireJS
             code = wrapAmdModule(code);
             break;
 
-        case &#x22;fd&#x22;:
-        case &#x22;fe&#x22;:
+        case "fd":
+        case "fe":
             // wipe tail ;
             code = removeTailSemicolons(code);
     }
@@ -2979,17 +2972,17 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
   Readable.call(this, options);
   Writable.call(this, options);
 
-  if (options &#x26;&#x26; options.readable === false)
+  if (options &amp;&amp; options.readable === false)
     this.readable = false;
 
-  if (options &#x26;&#x26; options.writable === false)
+  if (options &amp;&amp; options.writable === false)
     this.writable = false;
 
   this.allowHalfOpen = true;
-  if (options &#x26;&#x26; options.allowHalfOpen === false)
+  if (options &amp;&amp; options.allowHalfOpen === false)
     this.allowHalfOpen = false;
 
-  this.once(&#x27;end&#x27;, onend);
+  this.once('end', onend);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3009,8 +3002,8 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_push = function () {
-    // ALL written &#x26; flushed
-    if (this._finished &#x26;&#x26; this._buffer.length === 0) {
+    // ALL written &amp; flushed
+    if (this._finished &amp;&amp; this._buffer.length === 0) {
         this.push(null);
         return;
     }
@@ -3020,7 +3013,7 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
         return;
     }
 
-    var chunkSize = this._receiverCapacity &#x3e; this._buffer.length ? this._buffer.length : this._receiverCapacity;
+    var chunkSize = this._receiverCapacity &gt; this._buffer.length ? this._buffer.length : this._receiverCapacity;
     var chunk = this._buffer.slice(0, chunkSize);
     this._receiverCapacity -= chunk.length;
 
@@ -3123,7 +3116,7 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, cb) {
-  cb(new Error(&#x27;not implemented&#x27;));
+  cb(new Error('not implemented'));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3140,20 +3133,20 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     <li>description and source-code<pre class="apidocCodePre">end = function (chunk, encoding, cb) {
   var state = this._writableState;
 
-  if (typeof chunk === &#x27;function&#x27;) {
+  if (typeof chunk === 'function') {
     cb = chunk;
     chunk = null;
     encoding = null;
-  } else if (typeof encoding === &#x27;function&#x27;) {
+  } else if (typeof encoding === 'function') {
     cb = encoding;
     encoding = null;
   }
 
-  if (typeof chunk !== &#x27;undefined&#x27; &#x26;&#x26; chunk !== null)
+  if (typeof chunk !== 'undefined' &amp;&amp; chunk !== null)
     this.write(chunk, encoding);
 
   // ignore unnecessary end() calls.
-  if (!state.ending &#x26;&#x26; !state.finished)
+  if (!state.ending &amp;&amp; !state.finished)
     endWritable(this, state, cb);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3172,17 +3165,17 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
   var state = this._writableState;
   var ret = false;
 
-  if (typeof encoding === &#x27;function&#x27;) {
+  if (typeof encoding === 'function') {
     cb = encoding;
     encoding = null;
   }
 
   if (Buffer.isBuffer(chunk))
-    encoding = &#x27;buffer&#x27;;
+    encoding = 'buffer';
   else if (!encoding)
     encoding = state.defaultEncoding;
 
-  if (typeof cb !== &#x27;function&#x27;)
+  if (typeof cb !== 'function')
     cb = function() {};
 
   if (state.ended)
@@ -3195,17 +3188,17 @@ stats_coverage`&#x27;.green + &#x27; flag.&#x27;);
     <li>example usage<pre class="apidocCodePre">...
 
 function init(stdout, argv, cwd) {
-var options = require(&#x27;optimist&#x27;).parse(argv),
+var options = require('optimist').parse(argv),
     action = argv[2],
     logWriter = new cli.LogWriter(stdout);
 
-if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
-    stdout.<span class="apidocCodeKeywordSpan">write</span>(require(__dirname + &#x27;/../package.json&#x27;).version + &#x27;\n
-&#x27;);
+if (argv.length === 3 &amp;&amp; (options.v || options.version)) {
+    stdout.<span class="apidocCodeKeywordSpan">write</span>(require(__dirname + '/../package.json').version + '\n
+');
 
 } else if (!actionsAliases.hasOwnProperty(action)) {
-    if (argv.length &#x3e;= 4) {
-        require(__dirname + &#x27;/lmd_actions/old.js&#x27;)(logWriter, argv.slice(2), cwd);
+    if (argv.length &gt;= 4) {
+        require(__dirname + '/lmd_actions/old.js')(logWriter, argv.slice(2), cwd);
     } else {
         printHelp(logWriter);
     }
@@ -3227,7 +3220,7 @@ if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_read = function (n) {
-  this.emit(&#x27;error&#x27;, new Error(&#x27;not implemented&#x27;));
+  this.emit('error', new Error('not implemented'));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3244,10 +3237,10 @@ if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
     <li>description and source-code<pre class="apidocCodePre">addListener = function (ev, fn) {
   var res = Stream.prototype.on.call(this, ev, fn);
 
-  if (ev === &#x27;data&#x27; &#x26;&#x26; !this._readableState.flowing)
+  if (ev === 'data' &amp;&amp; !this._readableState.flowing)
     emitDataEvents(this);
 
-  if (ev === &#x27;readable&#x27; &#x26;&#x26; this.readable) {
+  if (ev === 'readable' &amp;&amp; this.readable) {
     var state = this._readableState;
     if (!state.readableListening) {
       state.readableListening = true;
@@ -3278,10 +3271,10 @@ if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
     <li>description and source-code<pre class="apidocCodePre">on = function (ev, fn) {
   var res = Stream.prototype.on.call(this, ev, fn);
 
-  if (ev === &#x27;data&#x27; &#x26;&#x26; !this._readableState.flowing)
+  if (ev === 'data' &amp;&amp; !this._readableState.flowing)
     emitDataEvents(this);
 
-  if (ev === &#x27;readable&#x27; &#x26;&#x26; this.readable) {
+  if (ev === 'readable' &amp;&amp; this.readable) {
     var state = this._readableState;
     if (!state.readableListening) {
       state.readableListening = true;
@@ -3311,7 +3304,7 @@ if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">pause = function () {
   emitDataEvents(this, true);
-  this.emit(&#x27;pause&#x27;);
+  this.emit('pause');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3342,17 +3335,17 @@ if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
   }
   state.pipesCount += 1;
 
-  var doEnd = (!pipeOpts || pipeOpts.end !== false) &#x26;&#x26;
-              dest !== process.stdout &#x26;&#x26;
+  var doEnd = (!pipeOpts || pipeOpts.end !== false) &amp;&amp;
+              dest !== process.stdout &amp;&amp;
               dest !== process.stderr;
 
   var endFn = doEnd ? onend : cleanup;
   if (state.endEmitted)
     process.nextTick(endFn);
   else
-    src.once(&#x27;end&#x27;, endFn);
+    src.once('end', endFn);
 
-  dest.on(&#x27;unpipe&#x27;, onunpipe);
+  dest.on('unpipe', onunpipe);
   function onunpipe(readable) {
     if (readable !== src) return;
     cleanup();
@@ -3367,39 +3360,39 @@ if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
   // handler in flow(), but adding and removing repeatedly is
   // too slow.
   var ondrain = pipeOnDrain(src);
-  dest.on(&#x27;drain&#x27;, ondrain);
+  dest.on('drain', ondrain);
 
   function cleanup() {
     // cleanup event handlers once the pipe is broken
-    dest.removeListener(&#x27;close&#x27;, onclose);
-    dest.removeListener(&#x27;finish&#x27;, onfinish);
-    dest.removeListener(&#x27;drain&#x27;, ondrain);
-    dest.removeListener(&#x27;error&#x27;, onerror);
-    dest.removeListener(&#x27;unpipe&#x27;, onunpipe);
-    src.removeListener(&#x27;end&#x27;, onend);
-    src.removeListener(&#x27;end&#x27;, cleanup);
+    dest.removeListener('close', onclose);
+    dest.removeListener('finish', onfinish);
+    dest.removeListener('drain', ondrain);
+    dest.removeListener('error', onerror);
+    dest.removeListener('unpipe', onunpipe);
+    src.removeListener('end', onend);
+    src.removeListener('end', cleanup);
 
     // if the reader is waiting for a drain event from this
     // specific writer, then it would cause it to never start
     // flowing again.
     // So, if this is awaiting a drain, then we just call it now.
-    // If we don&#x27;t know, then assume that we are waiting for one.
+    // If we don't know, then assume that we are waiting for one.
     if (!dest._writableState || dest._writableState.needDrain)
       ondrain();
   }
 
   // if the dest has an error, then stop piping into it.
-  // however, don&#x27;t suppress the throwing behavior for this.
+  // however, don't suppress the throwing behavior for this.
   function onerror(er) {
     unpipe();
-    dest.removeListener(&#x27;error&#x27;, onerror);
-    if (EE.listenerCount(dest, &#x27;error&#x27;) === 0)
-      dest.emit(&#x27;error&#x27;, er);
+    dest.removeListener('error', onerror);
+    if (EE.listenerCount(dest, 'error') === 0)
+      dest.emit('error', er);
   }
   // This is a brutally ugly hack to make sure that our error handler
   // is attached before any userland ones.  NEVER DO THIS.
   if (!dest._events || !dest._events.error)
-    dest.on(&#x27;error&#x27;, onerror);
+    dest.on('error', onerror);
   else if (isArray(dest._events.error))
     dest._events.error.unshift(onerror);
   else
@@ -3409,30 +3402,30 @@ if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
 
   // Both close and finish should trigger unpipe, but only once.
   function onclose() {
-    dest.removeListener(&#x27;finish&#x27;, onfinish);
+    dest.removeListener('finish', onfinish);
     unpipe();
   }
-  dest.once(&#x27;close&#x27;, onclose);
+  dest.once('close', onclose);
   function onfinish() {
-    dest.removeListener(&#x27;close&#x27;, onclose);
+    dest.removeListener('close', onclose);
     unpipe();
   }
-  dest.once(&#x27;finish&#x27;, onfinish);
+  dest.once('finish', onfinish);
 
   function unpipe() {
     src.unpipe(dest);
   }
 
-  // tell the dest that it&#x27;s being piped to
-  dest.emit(&#x27;pipe&#x27;, src);
+  // tell the dest that it's being piped to
+  dest.emit('pipe', src);
 
-  // start the flow if it hasn&#x27;t been started already.
+  // start the flow if it hasn't been started already.
   if (!state.flowing) {
     // the handler that waits for readable events after all
     // the data gets sucked out in flow.
     // This would be easier to follow with a .once() handler
     // in flow(), but that is too slow.
-    this.on(&#x27;readable&#x27;, pipeOnReadable);
+    this.on('readable', pipeOnReadable);
 
     state.flowing = true;
     process.nextTick(function() {
@@ -3457,11 +3450,11 @@ if (argv.length === 3 &#x26;&#x26; (options.v || options.version)) {
     <li>description and source-code<pre class="apidocCodePre">push = function (chunk, encoding) {
   var state = this._readableState;
 
-  if (typeof chunk === &#x27;string&#x27; &#x26;&#x26; !state.objectMode) {
+  if (typeof chunk === 'string' &amp;&amp; !state.objectMode) {
     encoding = encoding || state.defaultEncoding;
     if (encoding !== state.encoding) {
       chunk = new Buffer(chunk, encoding);
-      encoding = &#x27;&#x27;;
+      encoding = '';
     }
   }
 
@@ -3473,10 +3466,10 @@ configA.modules = configA.modules || {};
 configB.modules = configB.modules || {};
 for (var moduleName in configB.modules) {
     // Warn if module exists an its not a master config
-    if (!isMasterConfig &#x26;&#x26; configA.modules[moduleName]) {
+    if (!isMasterConfig &amp;&amp; configA.modules[moduleName]) {
         if (!isModulesEqual(configA.modules[moduleName], configB.modules[moduleName])) {
-            configA.errors.<span class="apidocCodeKeywordSpan">push</span>(&#x27;Name conflict! Module **&#x22;&#x27; + moduleName
- + &#x27;&#x22;** will be overwritten by &#x27; + context);
+            configA.errors.<span class="apidocCodeKeywordSpan">push</span>('Name conflict! Module **"' + moduleName
+ + '"** will be overwritten by ' + context);
         }
     }
     configA.modules[moduleName] = configB.modules[moduleName];
@@ -3502,37 +3495,37 @@ configA.styles = configA.styles || [];
   var nOrig = n;
   var ret;
 
-  if (typeof n !== &#x27;number&#x27; || n &#x3e; 0)
+  if (typeof n !== 'number' || n &gt; 0)
     state.emittedReadable = false;
 
-  // if we&#x27;re doing read(0) to trigger a readable event, but we
+  // if we're doing read(0) to trigger a readable event, but we
   // already have a bunch of data in the buffer, then just trigger
-  // the &#x27;readable&#x27; event and move on.
-  if (n === 0 &#x26;&#x26;
-      state.needReadable &#x26;&#x26;
-      (state.length &#x3e;= state.highWaterMark || state.ended)) {
+  // the 'readable' event and move on.
+  if (n === 0 &amp;&amp;
+      state.needReadable &amp;&amp;
+      (state.length &gt;= state.highWaterMark || state.ended)) {
     emitReadable(this);
     return null;
   }
 
   n = howMuchToRead(n, state);
 
-  // if we&#x27;ve ended, and we&#x27;re now clear, then finish it up.
-  if (n === 0 &#x26;&#x26; state.ended) {
+  // if we've ended, and we're now clear, then finish it up.
+  if (n === 0 &amp;&amp; state.ended) {
     ret = null;
 
     // In cases where the decoder did not receive enough data
     // to produce a full chunk, then immediately received an
-    // EOF, state.buffer will contain [&#x3c;Buffer &#x3e;, &#x3c;Buffer 00 ...&#x3e;].
+    // EOF, state.buffer will contain [&lt;Buffer &gt;, &lt;Buffer 00 ...&gt;].
     // howMuchToRead will see this and coerce the amount to
-    // read to zero (because it&#x27;s looking at the length of the
-    // first &#x3c;Buffer &#x3e; in state.buffer), and we&#x27;ll end up here.
+    // read to zero (because it's looking at the length of the
+    // first &lt;Buffer &gt; in state.buffer), and we'll end up here.
     //
     // This can only happen via state.decoder -- no other venue
     // exists for pushing a zero-length chunk into state.buffer
     // and triggering this behavior. In this case, we return our
     // remaining data and end the stream, if appropriate.
-    if (state.length &#x3e; 0 &#x26;&#x26; state.decoder) {
+    if (state.length &gt; 0 &amp;&amp; state.decoder) {
       ret = fromList(n, state);
       state.length -= ret.length;
     }
@@ -3556,12 +3549,12 @@ configA.styles = configA.styles || [];
   //
   // 2. If that resulting state will trigger a _read, then call _read.
   // Note that this may be asynchronous, or synchronous.  Yes, it is
-  // deeply ugly to write APIs this way, but that still doesn&#x27;t mean
+  // deeply ugly to write APIs this way, but that still doesn't mean
   // that the Readable class should behave improperly, as streams are
   // designed to be sync/async agnostic.
   // Take note if the _read call is sync or async (ie, if the read call
-  // has returned yet), so that we know whether or not it&#x27;s safe to emit
-  // &#x27;readable&#x27; etc.
+  // has returned yet), so that we know whether or not it's safe to emit
+  // 'readable' etc.
   //
   // 3. Actually pull the requested chunks out of the buffer and return.
 
@@ -3569,11 +3562,11 @@ configA.styles = configA.styles || [];
   var doRead = state.needReadable;
 
   // if we currently have less than the highWaterMark, then also read some
-  if (state.length - n &#x3c;= state.highWaterMark)
+  if (state.length - n &lt;= state.highWaterMark)
     doRead = true;
 
-  // however, if we&#x27;ve ended, then there&#x27;s no point, and if we&#x27;re already
-  // reading, then it&#x27;s unnecessary.
+  // however, if we've ended, then there's no point, and if we're already
+  // reading, then it's unnecessary.
   if (state.ended || state.reading)
     doRead = false;
 
@@ -3591,10 +3584,10 @@ configA.styles = configA.styles || [];
   // If _read called its callback synchronously, then `reading`
   // will be false, and we need to re-evaluate how much data we
   // can return to the user.
-  if (doRead &#x26;&#x26; !state.reading)
+  if (doRead &amp;&amp; !state.reading)
     n = howMuchToRead(nOrig, state);
 
-  if (n &#x3e; 0)
+  if (n &gt; 0)
     ret = fromList(n, state);
   else
     ret = null;
@@ -3608,13 +3601,13 @@ configA.styles = configA.styles || [];
 
   // If we have nothing in the buffer, then we want to know
   // as soon as we *do* get something into the buffer.
-  if (state.length === 0 &#x26;&#x26; !state.ended)
+  if (state.length === 0 &amp;&amp; !state.ended)
     state.needReadable = true;
 
   // If we happened to read() exactly the remaining amount in the
   // buffer, and the EOF has been seen at this point, then make sure
-  // that we emit &#x27;end&#x27; on the very next tick.
-  if (state.ended &#x26;&#x26; !state.endEmitted &#x26;&#x26; state.length === 0)
+  // that we emit 'end' on the very next tick.
+  if (state.ended &amp;&amp; !state.endEmitted &amp;&amp; state.length === 0)
     endReadable(this);
 
   return ret;
@@ -3634,7 +3627,7 @@ configA.styles = configA.styles || [];
     <li>description and source-code<pre class="apidocCodePre">resume = function () {
   emitDataEvents(this);
   this.read(0);
-  this.emit(&#x27;resume&#x27;);
+  this.emit('resume');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3650,7 +3643,7 @@ configA.styles = configA.styles || [];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setEncoding = function (enc) {
   if (!StringDecoder)
-    StringDecoder = require(&#x27;string_decoder/&#x27;).StringDecoder;
+    StringDecoder = require('string_decoder/').StringDecoder;
   this._readableState.decoder = new StringDecoder(enc);
   this._readableState.encoding = enc;
 }</pre></li>
@@ -3669,14 +3662,14 @@ configA.styles = configA.styles || [];
     <li>description and source-code<pre class="apidocCodePre">unpipe = function (dest) {
   var state = this._readableState;
 
-  // if we&#x27;re not piping anywhere, then do nothing.
+  // if we're not piping anywhere, then do nothing.
   if (state.pipesCount === 0)
     return this;
 
   // just one destination.  most common case.
   if (state.pipesCount === 1) {
-    // passed in one, but it&#x27;s not the right one.
-    if (dest &#x26;&#x26; dest !== state.pipes)
+    // passed in one, but it's not the right one.
+    if (dest &amp;&amp; dest !== state.pipes)
       return this;
 
     if (!dest)
@@ -3685,10 +3678,10 @@ configA.styles = configA.styles || [];
     // got a match.
     state.pipes = null;
     state.pipesCount = 0;
-    this.removeListener(&#x27;readable&#x27;, pipeOnReadable);
+    this.removeListener('readable', pipeOnReadable);
     state.flowing = false;
     if (dest)
-      dest.emit(&#x27;unpipe&#x27;, this);
+      dest.emit('unpipe', this);
     return this;
   }
 
@@ -3700,11 +3693,11 @@ configA.styles = configA.styles || [];
     var len = state.pipesCount;
     state.pipes = null;
     state.pipesCount = 0;
-    this.removeListener(&#x27;readable&#x27;, pipeOnReadable);
+    this.removeListener('readable', pipeOnReadable);
     state.flowing = false;
 
-    for (var i = 0; i &#x3c; len; i++)
-      dests[i].emit(&#x27;unpipe&#x27;, this);
+    for (var i = 0; i &lt; len; i++)
+      dests[i].emit('unpipe', this);
     return this;
   }
 
@@ -3718,7 +3711,7 @@ configA.styles = configA.styles || [];
   if (state.pipesCount === 1)
     state.pipes = state.pipes[0];
 
-  dest.emit(&#x27;unpipe&#x27;, this);
+  dest.emit('unpipe', this);
 
   return this;
 }</pre></li>
@@ -3736,18 +3729,18 @@ configA.styles = configA.styles || [];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unshift = function (chunk) {
   var state = this._readableState;
-  return readableAddChunk(this, state, chunk, &#x27;&#x27;, true);
+  return readableAddChunk(this, state, chunk, '', true);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
         for (var moduleName in modules) {
-if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignored) {
+if (!modules[moduleName].is_shortcut &amp;&amp; !modules[moduleName].is_ignored) {
     dependsMask = modules[moduleName].depends;
     dependsConfigPath = getDependsConfigOf(modules[moduleName].path, dependsMask);
     dependsConfigPath.forEach(function (dependsConfigPath) {
         if (fileExists(dependsConfigPath)) {
             if (!usedConfigs[dependsConfigPath]) {
                 configs.<span class="apidocCodeKeywordSpan">unshift</span>({
-                    context: &#x27;depends config **&#x27; + dependsConfigPath + &#x27;**&#x27;,
+                    context: 'depends config **' + dependsConfigPath + '**',
                     config: assembleLmdConfig(dependsConfigPath, flagsNames, null, usedConfigs)
                 });
             }
@@ -3771,25 +3764,25 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
   var paused = false;
 
   var self = this;
-  stream.on(&#x27;end&#x27;, function() {
-    if (state.decoder &#x26;&#x26; !state.ended) {
+  stream.on('end', function() {
+    if (state.decoder &amp;&amp; !state.ended) {
       var chunk = state.decoder.end();
-      if (chunk &#x26;&#x26; chunk.length)
+      if (chunk &amp;&amp; chunk.length)
         self.push(chunk);
     }
 
     self.push(null);
   });
 
-  stream.on(&#x27;data&#x27;, function(chunk) {
+  stream.on('data', function(chunk) {
     if (state.decoder)
       chunk = state.decoder.write(chunk);
 
-    // don&#x27;t skip over falsy values in objectMode
-    //if (state.objectMode &#x26;&#x26; util.isNullOrUndefined(chunk))
-    if (state.objectMode &#x26;&#x26; (chunk === null || chunk === undefined))
+    // don't skip over falsy values in objectMode
+    //if (state.objectMode &amp;&amp; util.isNullOrUndefined(chunk))
+    if (state.objectMode &amp;&amp; (chunk === null || chunk === undefined))
       return;
-    else if (!state.objectMode &#x26;&#x26; (!chunk || !chunk.length))
+    else if (!state.objectMode &amp;&amp; (!chunk || !chunk.length))
       return;
 
     var ret = self.push(chunk);
@@ -3802,8 +3795,8 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
   // proxy all the other methods.
   // important when wrapping filters and duplexes.
   for (var i in stream) {
-    if (typeof stream[i] === &#x27;function&#x27; &#x26;&#x26;
-        typeof this[i] === &#x27;undefined&#x27;) {
+    if (typeof stream[i] === 'function' &amp;&amp;
+        typeof this[i] === 'undefined') {
       this[i] = function(method) { return function() {
         return stream[method].apply(stream, arguments);
       }}(i);
@@ -3811,7 +3804,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
   }
 
   // proxy certain important events.
-  var events = [&#x27;error&#x27;, &#x27;close&#x27;, &#x27;destroy&#x27;, &#x27;pause&#x27;, &#x27;resume&#x27;];
+  var events = ['error', 'close', 'destroy', 'pause', 'resume'];
   forEach(events, function(ev) {
     stream.on(ev, self.emit.bind(self, ev));
   });
@@ -3870,12 +3863,12 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                 return;
             }
 
-            if (typeof self.watchConfig.output === &#x27;string&#x27;) {
+            if (typeof self.watchConfig.output === 'string') {
                 self.fsWatch(self.watchConfig);
                 return;
             } else {
-                self.log.write(&#x27;ERRO&#x27;.red.inverse + &#x27;:&#x27; + &#x27;    Check your config file. &#x22;output&#x22; parameter should be a {String} eg
- &#x22;../path&#x22;&#x27;.red + &#x27;\n&#x27;);
+                self.log.write('ERRO'.red.inverse + ':' + '    Check your config file. "output" parameter should be a {String} eg
+ "../path"'.red + '\n');
                 return;
             }
         } else {
@@ -3927,7 +3920,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
         });
 
         var modulesBundle = this.formatModules(modules, modulesInfo[common.ROOT_BUNDLE_ID], config, pack),
-            sourceMap = &#x27;&#x27;,
+            sourceMap = '',
             lmdFile;
 
         if (isBundle) {
@@ -4011,7 +4004,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_getBundleBanner = function (config) {
     // If exists return
-    if (typeof config.banner === &#x27;string&#x27;) {
+    if (typeof config.banner === 'string') {
         return config.banner;
     }
 
@@ -4021,8 +4014,8 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
             return path.basename(mixin);
         });
 
-    return &#x27;// This file was automatically generated from &#x22;&#x27; + configFile + &#x27;&#x22;&#x27; +
-            (mixinFiles.length ? &#x27; using mixins &#x22;&#x27; + mixinFiles.join(&#x27;&#x22;, &#x22;&#x27;) + &#x27;&#x22;&#x27; : &#x27;&#x27;);
+    return '// This file was automatically generated from "' + configFile + '"' +
+            (mixinFiles.length ? ' using mixins "' + mixinFiles.join('", "') + '"' : '');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4037,7 +4030,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_has = function (config, what) {
-    return !!(config &#x26;&#x26; config[what] &#x26;&#x26; Object.keys(config[what]).length);
+    return !!(config &amp;&amp; config[what] &amp;&amp; Object.keys(config[what]).length);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4056,15 +4049,15 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
 
     Object.keys(bundles).forEach(function (bundleName) {
         var stream = new DataStream();
-        stream.readable = self._has(bundles[bundleName], &#x27;modules&#x27;);
+        stream.readable = self._has(bundles[bundleName], 'modules');
 
         self.bundles[bundleName] = stream;
 
         stream.sourceMap = new DataStream();
-        stream.sourceMap.readable = self._has(bundles[bundleName], &#x27;modules&#x27;);
+        stream.sourceMap.readable = self._has(bundles[bundleName], 'modules');
 
         stream.style = new DataStream();
-        stream.style.readable = self._has(bundles[bundleName], &#x27;styles&#x27;);
+        stream.style.readable = self._has(bundles[bundleName], 'styles');
     });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4104,9 +4097,9 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">addPaddingToText = function (padding, text) {
-    return text.split(&#x27;\n&#x27;).map(function (line) {
-        return padding + &#x27;:    &#x27; + line;
-    }).join(&#x27;\n&#x27;) + &#x27;\n&#x27;;
+    return text.split('\n').map(function (line) {
+        return padding + ':    ' + line;
+    }).join('\n') + '\n';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4142,23 +4135,23 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <ul>
     <li>description and source-code<pre class="apidocCodePre">build = function (config) {
     // TODO TEST BUNDLES!!!!
-    for (var i = 0, c = config.errors.length; i &#x3c; c; i++) {
+    for (var i = 0, c = config.errors.length; i &lt; c; i++) {
         this.warn(config.errors[i], config.warn);
     }
 
-    if (typeof config.ie === &#x22;undefined&#x22;) {
+    if (typeof config.ie === "undefined") {
         config.ie = true;
     }
 
-    if (!config.cache &#x26;&#x26; config.cache_async) {
-        this.warn(&#x27;This package was configured with flag **cache_async: true**, but without flag **cache**; &#x27; +
-            &#x27;cache_async cant work independently. Flag cache_async is disabled! Please switch on **cache**.&#x27;, config.warn);
+    if (!config.cache &amp;&amp; config.cache_async) {
+        this.warn('This package was configured with flag **cache_async: true**, but without flag **cache**; ' +
+            'cache_async cant work independently. Flag cache_async is disabled! Please switch on **cache**.', config.warn);
         config.cache_async = false;
     }
 
-    if (config.cache &#x26;&#x26; typeof config.version === &#x22;undefined&#x22;) {
-        this.warn(&#x27;This package was configured with flag **cache: true**, but without flag **version** parameter. &#x27; +
-            &#x27;Please define **version** to enable cache.&#x27;, config.warn);
+    if (config.cache &amp;&amp; typeof config.version === "undefined") {
+        this.warn('This package was configured with flag **cache: true**, but without flag **version** parameter. ' +
+            'Please define **version** to enable cache.', config.warn);
     }
 
     return this._build(config);
@@ -4177,8 +4170,8 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <ul>
     <li>description and source-code<pre class="apidocCodePre">calculateModuleLines = function (source) {
     var lines = 1;
-    for (var i = 0, c = source.length; i &#x3c; c; i++) {
-         if (source[i] === &#x22;\n&#x22;) {
+    for (var i = 0, c = source.length; i &lt; c; i++) {
+         if (source[i] === "\n") {
             lines++;
          }
     }
@@ -4204,7 +4197,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     this.sourceMap.end();
 
     this._closeBundleStreams();
-    process.removeListener(&#x27;exit&#x27;, this._closeStreams);
+    process.removeListener('exit', this._closeStreams);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4234,7 +4227,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">compress = function (code, pack_options) {
-    pack_options = typeof pack_options === &#x22;object&#x22; ? pack_options : {};
+    pack_options = typeof pack_options === "object" ? pack_options : {};
     return uglifyCompress(code, pack_options);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4251,7 +4244,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <ul>
     <li>description and source-code<pre class="apidocCodePre">configure = function () {
     if (!this.configFile) {
-        this.log.write(&#x27;lmd usage:\n\t    lmd config.lmd.js(on) [output.lmd.js]\n&#x27;);
+        this.log.write('lmd usage:\n\t    lmd config.lmd.js(on) [output.lmd.js]\n');
         return false;
     }
     return true;
@@ -4269,13 +4262,13 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">createSourceMap = function (modules, modulesInfo, sourceWithTokens, config) {
-    var configRoot = String(config.root || config.path || &#x27;&#x27;),
-        configOutput = String(config.output || &#x27;&#x27;),
-        configWwwRoot = String(config.www_root || &#x27;&#x27;),
+    var configRoot = String(config.root || config.path || ''),
+        configOutput = String(config.output || ''),
+        configWwwRoot = String(config.www_root || ''),
         // #174 apply default value only for non-strings
-        configSourcemapWww = typeof config.sourcemap_www === &#x27;string&#x27; ? config.sourcemap_www : &#x27;/&#x27;,
-        configSourcemap = String(config.sourcemap || &#x27;&#x27;),
-        configSourceMappingURL = String(config.sourcemap_url || &#x27;&#x27;);
+        configSourcemapWww = typeof config.sourcemap_www === 'string' ? config.sourcemap_www : '/',
+        configSourcemap = String(config.sourcemap || ''),
+        configSourceMappingURL = String(config.sourcemap_url || '');
 
     var generatedFile = path.resolve(this.configDir, configRoot, configOutput),
         root = path.resolve(this.configDir, configRoot, configWwwRoot),
@@ -4314,7 +4307,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
 
             var offset = self.getModuleOffset(sourceWithTokens, tokenIndex),
                 // #174 replace back slashes with front slashes
-                source = path.relative(root, module.path).replace(/\\/g, &#x27;/&#x27;);
+                source = path.relative(root, module.path).replace(/\\/g, '/');
 
             hasOriginalSourceMap = false;
 
@@ -4330,9 +4323,9 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                     }
                 }
                 // find sourceMap in module directory
-                if (!hasOriginalSourceMap &#x26;&#x26; fs.existsSync(module.path + &#x27;.map&#x27;)) {
+                if (!hasOriginalSourceMap &amp;&amp; fs.existsSync(module.path + '.map')) {
                     hasOriginalSourceMap = true;
-                    originalSourceMap = JSON.parse(fs.readFileSync(module.path + &#x27;.map&#x27;));
+                    originalSourceMap = JSON.parse(fs.readFileSync(module.path + '.map'));
                 }
             } catch (e) {}
 
@@ -4340,7 +4333,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                 originalSourceMap = new SourceMapConsumer(originalSourceMap);
 
                 first = true;
-                // move original source map =&#x3e; result source map
+                // move original source map =&gt; result source map
                 originalSourceMap.eachMapping(function (mapping) {
                     sourceMap.addMapping({
                         generated: {
@@ -4358,7 +4351,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                 });
             } else {
                 // add mapping for each line
-                for (var i = 0; i &#x3c; module.lines; i++) {
+                for (var i = 0; i &lt; module.lines; i++) {
                     sourceMap.addMapping({
                         generated: {
                             // only first line can be with column offset ...</pre></li>
@@ -4377,8 +4370,8 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <li>description and source-code<pre class="apidocCodePre">createToken = function (modulePath) {
     // issue 178 String modules getting corrupted on Windows when using source map.
     // replace \ with / in order to fix JSON.stringify escaping issue
-    modulePath = modulePath.replace(/\\/g, &#x27;/&#x27;);
-    return &#x27;/**[[LMD_TOKEN]]:&#x27; + modulePath + &#x27;**/&#x27;;
+    modulePath = modulePath.replace(/\\/g, '/');
+    return '/**[[LMD_TOKEN]]:' + modulePath + '**/';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4395,27 +4388,27 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <li>description and source-code<pre class="apidocCodePre">defaults = function (options) {
     options = options || {};
 
-    if (typeof options.warn === &#x22;undefined&#x22;) {
+    if (typeof options.warn === "undefined") {
         options.warn = true;
     }
 
-    if (typeof options.log === &#x22;undefined&#x22;) {
+    if (typeof options.log === "undefined") {
         options.log = true;
     }
 
-    if (typeof options.output === &#x27;undefined&#x27;) {
+    if (typeof options.output === 'undefined') {
         options.output = false;
     }
 
-    if (typeof options.styles_output === &#x27;undefined&#x27; &#x26;&#x26; typeof options.output === &#x27;string&#x27;) {
+    if (typeof options.styles_output === 'undefined' &amp;&amp; typeof options.output === 'string') {
         options.styles_output = path.join(
             path.dirname(options.output),
-            path.basename(options.output, path.extname(options.output)) + &#x27;.css&#x27;
+            path.basename(options.output, path.extname(options.output)) + '.css'
         );
     }
 
-    if (typeof options.bundles_callback === &#x27;undefined&#x27;) {
-        options.bundles_callback = &#x27;_&#x27; + Math.round(Math.random() * 0xFFFFFFFF).toString(16);
+    if (typeof options.bundles_callback === 'undefined') {
+        options.bundles_callback = '_' + Math.round(Math.random() * 0xFFFFFFFF).toString(16);
     }
 
     Object.keys(options.bundles || {}).forEach(function (name) {
@@ -4438,7 +4431,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <ul>
     <li>description and source-code<pre class="apidocCodePre">error = function (text) {
     text = this.formatLog(text);
-    this.log.write(this.addPaddingToText(&#x27;ERRO&#x27;.red.inverse, text));
+    this.log.write(this.addPaddingToText('ERRO'.red.inverse, text));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4469,7 +4462,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <ul>
     <li>description and source-code<pre class="apidocCodePre">formatLog = function (text) {
     return text.replace(/\*\*([^\*]*)\*\*/g, function (str) {
-        return str.replace(/^\*\*|\*\*$/g, &#x27;&#x27;).green;
+        return str.replace(/^\*\*|\*\*$/g, '').green;
     });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4488,11 +4481,11 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     var mainModuleName = config.main;
 
     switch (moduleInfo.type) {
-        case &#x22;amd&#x22;:
-        case &#x22;fd&#x22;:
-        case &#x22;fe&#x22;:
-        case &#x22;plain&#x22;:
-        case &#x22;3-party&#x22;:
+        case "amd":
+        case "fd":
+        case "fe":
+        case "plain":
+        case "3-party":
             // #26 Code coverage
             if (module.is_coverage) {
                 var skipLines = ({
@@ -4512,15 +4505,15 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                 moduleInfo.code = this.compress(moduleInfo.code, config.pack_options);
             }
 
-            if (module.name !== mainModuleName &#x26;&#x26; module.is_lazy) {
-                moduleInfo.code = moduleInfo.code.replace(/^function[^\(]*/, &#x27;function&#x27;);
-                if (moduleInfo.code.indexOf(&#x27;(function(&#x27;) !== 0) {
-                    moduleInfo.code = &#x27;(&#x27; + moduleInfo.code + &#x27;)&#x27;;
+            if (module.name !== mainModuleName &amp;&amp; module.is_lazy) {
+                moduleInfo.code = moduleInfo.code.replace(/^function[^\(]*/, 'function');
+                if (moduleInfo.code.indexOf('(function(') !== 0) {
+                    moduleInfo.code = '(' + moduleInfo.code + ')';
                 }
                 moduleInfo.code = this.escape(moduleInfo.code);
             }
             break;
-        case &#x22;string&#x22;:
+        case "string":
             moduleInfo.code = this.escape(moduleInfo.code);
             break;
     }
@@ -4540,7 +4533,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <li>description and source-code<pre class="apidocCodePre">formatModules = function (modules, modulesInfo, config, isPack) {
     var self = this;
     var modulesBundle = {
-        main: &#x27;&#x27;,
+        main: '',
         modules: [],
         options: {}
     };
@@ -4561,11 +4554,11 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
             self.warn(warning, config.warn);
         });
 
-        if (moduleInfo.type === &#x22;shortcut&#x22;) {
+        if (moduleInfo.type === "shortcut") {
             if (module.name === mainModuleName) {
-                this.warn(&#x27;Main module can not be a shortcut. Your app will throw an error.&#x27;, config.warn);
+                this.warn('Main module can not be a shortcut. Your app will throw an error.', config.warn);
             } else {
-                modulesBundle.modules.push(this.escape(module.name) + &#x27;: &#x27; + this.escape(module.path));
+                modulesBundle.modules.push(this.escape(module.name) + ': ' + this.escape(module.path));
             }
             continue;
         }
@@ -4578,7 +4571,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
         if (module.name === mainModuleName) {
             modulesBundle.main = moduleInfo.code;
         } else {
-            modulesBundle.modules.push(this.escape(module.name) + &#x27;: &#x27; + moduleInfo.code);
+            modulesBundle.modules.push(this.escape(module.name) + ': ' + moduleInfo.code);
         }
     }
 
@@ -4607,7 +4600,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <li>description and source-code<pre class="apidocCodePre">fsWatch = function (config) {
     var self = this;
 
-    for (var i = 0, c = config.errors.length; i &#x3c; c; i++) {
+    for (var i = 0, c = config.errors.length; i &lt; c; i++) {
         this.warn(config.errors[i], config.warn);
     }
 
@@ -4615,16 +4608,16 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
             self.log.write(test);
         },
         rebuild = function (stat, filename) {
-            if (stat &#x26;&#x26; filename) {
-                log(&#x27;info&#x27;.green + &#x27;:    Change detected in &#x27; + path.basename(filename).toString().green + &#x27; at &#x27; + stat.mtime.toString
+            if (stat &amp;&amp; filename) {
+                log('info'.green + ':    Change detected in ' + path.basename(filename).toString().green + ' at ' + stat.mtime.toString
 ().blue);
             } else if (stat) {
-                log(&#x27;info&#x27;.green + &#x27;:    Change detected at &#x27; + stat.mtime.toString().blue);
+                log('info'.green + ':    Change detected at ' + stat.mtime.toString().blue);
             } else {
-                log(&#x27;info&#x27;.green + &#x27;:   &#x27;);
+                log('info'.green + ':   ');
             }
 
-            log(&#x27; Rebuilding...\n&#x27;);
+            log(' Rebuilding...\n');
 
             var buildResult = new LmdBuilder(self.configFile, self.options);
 
@@ -4634,15 +4627,15 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                         return;
                     }
                     if (err) {
-                        log(&#x27;info&#x27;.red + &#x27;:    Build failed&#x27;.red + &#x27;\n&#x27;);
+                        log('info'.red + ':    Build failed'.red + '\n');
                     } else {
-                        log(&#x27;info&#x27;.green + &#x27;:    Build complete&#x27;.green + &#x27;\n&#x27;);
+                        log('info'.green + ':    Build complete'.green + '\n');
                     }
                 });
 
         },
         watch = function (event, filename) {
-            if (event === &#x27;change&#x27;) {
+            if (event === 'change') {
                 if (filename) {
                     rebuild(fs.stat(filename), filename);
                 } else {
@@ -4651,7 +4644,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
             }
         },
         watchFile = function (curr, prev, filename) {
-            if (curr.mtime &#x3e; prev.mtime) {
+            if (curr.mtime &gt; prev.mtime) {
                 rebuild(curr, filename);
             }
         },
@@ -4681,12 +4674,12 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                     names = names.concat(module.path);
                 } else {
                     // Skip shortcuts
-                    if (module.path.charAt(0) === &#x27;@&#x27;) continue;
+                    if (module.path.charAt(0) === '@') continue;
                     names.push(module.path);
                 }
             }
 
-            for (var i = 0, c = styles.length; i &#x3c; c; i++) {
+            for (var i = 0, c = styles.length; i &lt; c; i++) {
                 names.push(styles[i].path);
             }
 
@@ -4719,7 +4712,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
 
         // add lmd.json too
         addWatcherFor(this.configFile);
-        log(&#x27;info&#x27;.green + &#x27;:    Now watching &#x27; + watchedModulesCount.toString().green + &#x27; files. Ctrl+C to stop\n&#x27;);
+        log('info'.green + ':    Now watching ' + watchedModulesCount.toString().green + ' files. Ctrl+C to stop\n');
 
         // Rebuild at startup
         rebuild();
@@ -4741,10 +4734,10 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     var cols = 0,
         rows = 1;
 
-    for (var i = 0, symbol; i &#x3c; tokenIndex; i++) {
+    for (var i = 0, symbol; i &lt; tokenIndex; i++) {
         symbol = source[i];
 
-        if (symbol === &#x27;\n&#x27;) {
+        if (symbol === '\n') {
             rows++;
             cols = 0;
         } else {
@@ -4794,7 +4787,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <ul>
     <li>description and source-code<pre class="apidocCodePre">info = function (text) {
     text = this.formatLog(text);
-    this.log.write(this.addPaddingToText(&#x27;info&#x27;.green, text));
+    this.log.write(this.addPaddingToText('info'.green, text));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4835,7 +4828,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
      */
     this.style = new DataStream();
 
-    process.once(&#x27;exit&#x27;, this._closeStreams);
+    process.once('exit', this._closeStreams);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4862,7 +4855,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
         }
     }
 
-    for (var i = 0, c = styles.length; i &#x3c; c; i++) {
+    for (var i = 0, c = styles.length; i &lt; c; i++) {
         if (!styles[i].is_exists) {
             return false;
         }
@@ -4899,9 +4892,9 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">isModuleCanBeUnderSourceMap = function (moduleDescriptor) {
-    return !moduleDescriptor.is_shortcut &#x26;&#x26;
-           !moduleDescriptor.is_coverage &#x26;&#x26;
-           !moduleDescriptor.is_lazy &#x26;&#x26;
+    return !moduleDescriptor.is_shortcut &amp;&amp;
+           !moduleDescriptor.is_coverage &amp;&amp;
+           !moduleDescriptor.is_lazy &amp;&amp;
            !moduleDescriptor.is_multi_path_module;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4918,13 +4911,13 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <ul>
     <li>description and source-code<pre class="apidocCodePre">makeEmptyStreamsUnreadable = function (config) {
     // modules
-    this.readable = this._has(config, &#x27;modules&#x27;);
+    this.readable = this._has(config, 'modules');
 
     // source map
-    this.sourceMap.readable = this._has(config, &#x27;modules&#x27;);
+    this.sourceMap.readable = this._has(config, 'modules');
 
     // styles
-    this.style.readable = this._has(config, &#x27;styles&#x27;);
+    this.style.readable = this._has(config, 'styles');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4953,10 +4946,10 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
 
         walker.with_walkers({
             // looking for first var with sandbox item;
-            &#x22;var&#x22; : function (vars) {
-                for (var i = 0, c = vars.length, varItem; i &#x3c; c; i++) {
+            "var" : function (vars) {
+                for (var i = 0, c = vars.length, varItem; i &lt; c; i++) {
                     varItem = vars[i];
-                    if (varItem[0] === &#x27;sandbox&#x27;) {
+                    if (varItem[0] === 'sandbox') {
                         varItem[1][1].forEach(function (objectVar) {
                             map[objectVar[0]] = objectVar[1][1];
                         });
@@ -4982,23 +4975,23 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
      * @return {Object} call AST
      */
     function breakSandbox(ast, replaceMap) {
-        var sandboxName = ast[2][0] || &#x27;sb&#x27;;
+        var sandboxName = ast[2][0] || 'sb';
 
         var newAst = walker.with_walkers({
             // lookup for dot
             // looking for this pattern
-            // [&#x22;dot&#x22;, [&#x22;name&#x22;, &#x22;sb&#x22;], &#x22;require&#x22;] -&#x3e; [&#x22;name&#x22;, map[&#x22;require&#x22;]]
-            &#x22;dot&#x22; : function () {
-                if (this[1] &#x26;&#x26; this[1][0] === &#x22;name&#x22; &#x26;&#x26; this[1][1] === sandboxName) {
+            // ["dot", ["name", "sb"], "require"] -&gt; ["name", map["require"]]
+            "dot" : function () {
+                if (this[1] &amp;&amp; this[1][0] === "name" &amp;&amp; this[1][1] === sandboxName) {
                     var sourceName = this[2];
-                    return [&#x22;name&#x22;, replaceMap[sourceName]];
+                    return ["name", replaceMap[sourceName]];
                 }
             }
         }, function () {
             return walker.walk(ast);
         });
 
-        // remove IEFE&#x27;s `sb` or whatever argument
+        // remove IEFE's `sb` or whatever argument
         newAst[1][2] = [];
 
         return newAst;
@@ -5020,16 +5013,16 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
         return walker.with_walkers({
             // lookup for modules
             // looking for this pattern
-            // [ &#x27;call&#x27;,
-            //  [ &#x27;function&#x27;, null, [ &#x27;sb&#x27; ], [ [Object] ] ],
-            //  [ [ &#x27;name&#x27;, &#x27;sandbox&#x27; ] ] ]
-            &#x22;call&#x22; : function (content) {
-                if (this[2] &#x26;&#x26;
-                    this[2].length &#x3e; 0 &#x26;&#x26;
-                    this[2][0][0] === &#x22;name&#x22; &#x26;&#x26;
-                    this[2][0][1] === &#x22;sandbox&#x22; &#x26;&#x26;
-                    this[1] &#x26;&#x26;
-                    this[1][0] === &#x22;function&#x22;
+            // [ 'call',
+            //  [ 'function', null, [ 'sb' ], [ [Object] ] ],
+            //  [ [ 'name', 'sandbox' ] ] ]
+            "call" : function (content) {
+                if (this[2] &amp;&amp;
+                    this[2].length &gt; 0 &amp;&amp;
+                    this[2][0][0] === "name" &amp;&amp;
+                    this[2][0][1] === "sandbox" &amp;&amp;
+                    this[1] &amp;&amp;
+                    this[1][0] === "function"
                     ) {
                     // 1. remove sandbox argument
                     this[2] = [];
@@ -5038,14 +5031,14 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                 }
             },
             // wipe sandobx variable
-            &#x22;var&#x22;: function () {
+            "var": function () {
                 if (isSandboxVariableWiped) {
                     return;
                 }
 
-                for (var i = 0, c = this[1].length, varItem; i &#x3c; c; i++) {
+                for (var i = 0, c = this[1].length, varItem; i &lt; c; i++) {
                     varItem = this[1][i];
-                    if (varItem[0] === &#x27;sandbox&#x27;) {
+                    if (varItem[0] === 'sandbox') {
                         isSandboxVariableWiped = true;
                         this[1].splice(i, 1);
 
@@ -5101,7 +5094,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
      */
 </span>    var preProcessBlock = function (optionName, isApply, isInline) {
         // /*if ($P.CSS || $P.JS || $P.ASYNC) {*/
-        var inlinePreprocessorBlock = isInline ? &#x27;/*if (&#x27; + optionName + &#x27;) {*/&#x27; : &#x27;if (&#x27; + optionName + &#x27;) {&#x27;,
+        var inlinePreprocessorBlock = isInline ? '/*if (' + optionName + ') {*/' : 'if (' + optionName + ') {',
             bracesCounter = 0,
 
             startIndex = lmd_js.indexOf(inlinePreprocessorBlock),
@@ -5115,11 +5108,11 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
         }
 
         // lookup for own }
-        while (lmd_js.length &#x3e; endIndex) {
-            if (lmd_js[endIndex] === &#x27;{&#x27;) {
+        while (lmd_js.length &gt; endIndex) {
+            if (lmd_js[endIndex] === '{') {
                 bracesCounter++;
             }
-            if (lmd_js[endIndex] === &#x27;}&#x27;) {
+            if (lmd_js[endIndex] === '}') {
                 bracesCounter--;
             }
 
@@ -5133,7 +5126,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                     while (startIndex) {
                         startIndex--;
                         startLength++;
-                        if (lmd_js[startIndex] !== &#x27;\t&#x27; &#x26;&#x26; lmd_js[startIndex] !== &#x27; &#x27;) {
+                        if (lmd_js[startIndex] !== '\t' &amp;&amp; lmd_js[startIndex] !== ' ') {
                             startIndex++;
                             startLength--;
                             break;
@@ -5144,7 +5137,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                     while (endIndex) {
                         endIndex--;
                         endLength++;
-                        if (lmd_js[endIndex] !== &#x27;\t&#x27; &#x26;&#x26; lmd_js[endIndex] !== &#x27; &#x27;) {
+                        if (lmd_js[endIndex] !== '\t' &amp;&amp; lmd_js[endIndex] !== ' ') {
                             endIndex++;
                             endLength--;
                             break;
@@ -5168,11 +5161,11 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
                         var blockForIndent = lmd_js.substr(startIndex, endIndex - startLength - startIndex);
 
                         blockForIndent = blockForIndent
-                            .split(&#x27;\n&#x27;)
+                            .split('\n')
                             .map(function (line) {
-                                return line.replace(/^\s{4}/, &#x27;&#x27;);
+                                return line.replace(/^\s{4}/, '');
                             })
-                            .join(&#x27;\n&#x27;);
+                            .join('\n');
 
                         lmd_js = lmd_js.substr(0, startIndex) + blockForIndent + lmd_js.substr(endIndex - startLength);
                     }
@@ -5190,14 +5183,14 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
 
     // Add plugins
     var pluginsRequireList = {},
-        pluginsCode = &#x27;&#x27;;
+        pluginsCode = '';
 
     // Collect plugins code
     for (flagName in this.flagToOptionNameMap) {
         var plugins = this.flagToOptionNameMap[flagName].require;
 
-        if (typeof plugins !== &#x22;undefined&#x22;) {
-            if (typeof plugins === &#x22;string&#x22;) {
+        if (typeof plugins !== "undefined") {
+            if (typeof plugins === "string") {
                 plugins = [plugins];
             }
 
@@ -5225,24 +5218,24 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
 
     for (var moduleName in modules) {
         if (!modules[moduleName].is_exists) {
-            errorMessage = &#x27;Module &#x22;&#x27; + moduleName.cyan + &#x27;&#x22;: &#x22;&#x27; +
+            errorMessage = 'Module "' + moduleName.cyan + '": "' +
                 modules[moduleName].originalPath.toString().red;
-            errorMessage += &#x27;&#x22; (&#x27;;
+            errorMessage += '" (';
             // check multi path modules
             errorMessage += [].concat(modules[moduleName].path).map(function (path) {
-                return String(path)[fs.existsSync(path) ? &#x27;green&#x27; : &#x27;red&#x27;];
-            }).join(&#x27;, &#x27;);
-            errorMessage += &#x27;) is not exists. Project root: &#x22;&#x27; + String(projectRoot).green + &#x27;&#x22;. &#x27;;
+                return String(path)[fs.existsSync(path) ? 'green' : 'red'];
+            }).join(', ');
+            errorMessage += ') is not exists. Project root: "' + String(projectRoot).green + '". ';
 
             this.error(errorMessage);
         }
     }
 
-    for (var i = 0, c = styles.length; i &#x3c; c; i++) {
+    for (var i = 0, c = styles.length; i &lt; c; i++) {
         if (!styles[i].is_exists) {
-            errorMessage = &#x27;Style (&#x27; +
-                styles[i].path.toString().red + &#x27;) is not exists. &#x27; +
-                &#x27;Project root: &#x22;&#x27; + String(projectRoot).green + &#x27;&#x22;. &#x27;;
+            errorMessage = 'Style (' +
+                styles[i].path.toString().red + ') is not exists. ' +
+                'Project root: "' + String(projectRoot).green + '". ';
 
             this.error(errorMessage);
         }
@@ -5252,9 +5245,9 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     for (var bundleName in bundles) {
         bundle = bundles[bundleName];
         if (bundle instanceof Error) {
-            errorMessage = &#x27;Bundle &#x22;&#x27; + bundleName.cyan + &#x27;&#x22;: (&#x27; +
-                bundle.message.red + &#x27;) is not exists. &#x27; +
-                &#x27;Project root: &#x22;&#x27; + String(projectRoot).green + &#x27;&#x22;. &#x27;;
+            errorMessage = 'Bundle "' + bundleName.cyan + '": (' +
+                bundle.message.red + ') is not exists. ' +
+                'Project root: "' + String(projectRoot).green + '". ';
 
             this.error(errorMessage);
         } else {
@@ -5276,7 +5269,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">removeTailSemicolons = function (code) {
-    return code.replace(/\n*;$/, &#x27;&#x27;);
+    return code.replace(/\n*;$/, '');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5295,7 +5288,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
         lmd_main: modulesBundle.main,
         bundles_callback: config.bundles_callback,
         build_info: this._getBundleBanner(config),
-        lmd_modules: &#x27;{\n&#x27; + modulesBundle.modules.join(&#x27;,\n&#x27;) + &#x27;\n}&#x27;,
+        lmd_modules: '{\n' + modulesBundle.modules.join(',\n') + '\n}',
         modules_options: JSON.stringify(modulesBundle.options)
     });
 }</pre></li>
@@ -5312,7 +5305,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">renderLmdPackage = function (config, modulesBundle, isOptimizeLmd) {
-    var lmd_js = fs.readFileSync(path.join(LMD_JS_SRC_PATH, &#x27;lmd.js&#x27;), &#x27;utf8&#x27;),
+    var lmd_js = fs.readFileSync(path.join(LMD_JS_SRC_PATH, 'lmd.js'), 'utf8'),
         lmd_main = modulesBundle.main,
         lmd_modules = modulesBundle.modules,
         modules_options = modulesBundle.options,
@@ -5323,7 +5316,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     if (isOptimizeLmd) {
         lmd_js = this.optimizeLmdSource(lmd_js);
     }
-    lmd_modules = &#x27;{\n&#x27; + lmd_modules.join(&#x27;,\n&#x27;) + &#x27;\n}&#x27;;
+    lmd_modules = '{\n' + lmd_modules.join(',\n') + '\n}';
 
     var options = {},
         version = config.cache ? config.version : false,
@@ -5331,7 +5324,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
         promise = config.promise || false,
         bundle = config.bundle ? config.bundles_callback : false;
 
-    // if version passed -&#x3e; module will be cached
+    // if version passed -&gt; module will be cached
     if (version) {
         options.version = version;
     }
@@ -5352,7 +5345,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
 
     for (var userPluginName in config.plugins) {
         userPlugin = config.plugins[userPluginName];
-        if (userPlugin.isOk &#x26;&#x26; userPlugin.options &#x26;&#x26; !options[userPlugin.name]) {
+        if (userPlugin.isOk &amp;&amp; userPlugin.options &amp;&amp; !options[userPlugin.name]) {
             options[userPlugin.name] = userPlugin.options;
         }
     }
@@ -5362,8 +5355,8 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     result = this.templatePackage({
         build_info: this._getBundleBanner(config),
         lmd_js: lmd_js,
-        global: config.global || &#x27;this&#x27;,
-        lmd_main: lmd_main || &#x27;function(){}&#x27;,
+        global: config.global || 'this',
+        lmd_main: lmd_main || 'function(){}',
         lmd_modules: lmd_modules,
         modules_options: JSON.stringify(modules_options),
         options: options
@@ -5385,7 +5378,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <ul>
     <li>description and source-code<pre class="apidocCodePre">renderStyles = function (styles, isOptimizeCss) {
     if (!styles || !styles.length) {
-        return &#x27;&#x27;;
+        return '';
     }
 
     var allCss = styles
@@ -5393,9 +5386,9 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
             return style.is_exists;
         })
         .map(function (style) {
-            return fs.readFileSync(style.path, &#x27;utf8&#x27;);
+            return fs.readFileSync(style.path, 'utf8');
         })
-        .join(&#x27;\n&#x27;);
+        .join('\n');
 
     return isOptimizeCss ? csso.justDoIt(allCss, true) : allCss;
 }</pre></li>
@@ -5412,12 +5405,12 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">templateBundle = function (data) {
-    return (data.build_info ? data.build_info + &#x27;\n&#x27; : &#x27;&#x27;) +
-    data.bundles_callback + &#x27;(&#x27; +
-        (data.lmd_main ? data.lmd_main + &#x27;,&#x27; : &#x27;&#x27;) +
-        data.lmd_modules + &#x27;,&#x27; +
+    return (data.build_info ? data.build_info + '\n' : '') +
+    data.bundles_callback + '(' +
+        (data.lmd_main ? data.lmd_main + ',' : '') +
+        data.lmd_modules + ',' +
         data.modules_options +
-    &#x27;);\n&#x27;;
+    ');\n';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5432,15 +5425,15 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">templatePackage = function (data) {
-    return (data.build_info ? data.build_info + &#x27;\n&#x27; : &#x27;&#x27;) +
+    return (data.build_info ? data.build_info + '\n' : '') +
     data.lmd_js +
-    &#x27;\n(&#x27; +
-        data.global + &#x27;,&#x27; +
-        data.lmd_main + &#x27;,&#x27; +
-        data.lmd_modules + &#x27;,&#x27; +
-        data.modules_options + &#x27;,&#x27; +
+    '\n(' +
+        data.global + ',' +
+        data.lmd_main + ',' +
+        data.lmd_modules + ',' +
+        data.modules_options + ',' +
         data.options +
-    &#x27;);\n&#x27;;
+    ');\n';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5457,7 +5450,7 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     <li>description and source-code<pre class="apidocCodePre">warn = function (text, isWarn) {
     if (isWarn) {
         text = this.formatLog(text);
-        this.log.write(this.addPaddingToText(&#x27;warn&#x27;.yellow, text));
+        this.log.write(this.addPaddingToText('warn'.yellow, text));
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5472,3 +5465,4 @@ if (!modules[moduleName].is_shortcut &#x26;&#x26; !modules[moduleName].is_ignore
     ]
 </div>
 </div>
+</body></html>
